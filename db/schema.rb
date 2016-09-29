@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929085956) do
+ActiveRecord::Schema.define(version: 20160929121632) do
+
+  create_table "colleges", force: :cascade do |t|
+    t.string   "college_name", limit: 255
+    t.integer  "type",         limit: 4,   default: 0
+    t.string   "locate",       limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lectures", force: :cascade do |t|
+    t.string   "lecture_title", limit: 255
+    t.string   "teacher",       limit: 255
+    t.text     "content",       limit: 65535
+    t.integer  "college_id",    limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lectures", ["college_id"], name: "fk_rails_6f14f944aa", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -21,4 +40,5 @@ ActiveRecord::Schema.define(version: 20160929085956) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "lectures", "colleges"
 end
