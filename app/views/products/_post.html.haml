@@ -1,0 +1,13 @@
+.panel.clearfix
+  .modal-content
+    %section#teams.section.teams
+      .row
+        .col-md-12.col-sm-12.conForm
+          .contact
+            #message
+            %form#cform{:action => "php/contact.php", :method => "post", :name => "cform"}
+              %input#name.col-xs-12.col-sm-12.col-md-12.col-lg-12{:name => "name", :placeholder => "Your name...", :type => "text"}/
+              %input#email.col-xs-12.col-sm-12.col-md-12.col-lg-12.noMarr{:name => "email", :placeholder => "Email Address...", :type => "email"}/
+              %textarea#comments.col-xs-12.col-sm-12.col-md-12.col-lg-12{:cols => "", :name => "comments", :placeholder => "Project Details...", :rows => ""}
+              %input#submit.submitBnt{:name => "send", :type => "submit", :value => "Send"}/
+              #simple-msg

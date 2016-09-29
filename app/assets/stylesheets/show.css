@@ -1,0 +1,131 @@
+#product {
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  /*margin: 120px auto 50px;*/
+  padding: 100px 0;
+  color: #000;
+}
+
+.product_box{
+  margin: 0 auto;
+  float: none;
+}
+
+.catchcopy {
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  margin: 0 auto 10px;
+  font-size: 40px;
+  padding: 0;
+}
+
+.main_image{
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main_image .image{
+  width: 100%;
+  text-align: center;
+}
+
+.product_title{
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  border-left: solid 5px #C3D825;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.product_title h3{
+  padding: 0 10px;
+}
+
+.college{
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.concept{
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+hr {
+  border: none;
+  border-top: 5px solid #C3D825;
+}
+
+.tag ul li{
+  margin: 10px 10px 10px 0;
+  padding: 5px 10px;
+  float: left;
+  border: 2px solid #c3d825;
+  border-radius: 2.5px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.images_box{
+  letter-spacing: -.4em;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  overflow: hidden;
+  margin: 10px 0;
+  max-height: 150px;
+}
+
+.images_box .container ul li{
+  float: left;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.images_box .container ul li img{
+  max-height: 150px;
+}
+
+.images_box ul li:hover img {
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.shere{
+  margin: 20px 10px 10px 0;
+  padding: 10px 10px;
+  /*border: 2px solid #c3d825;*/
+  background: #c3d825;
+  border-radius: 2.5px;
+  float: none;
+}
+
+.shere.like:hover{
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  color: #FFF;
+}
+
+.comments_box {
+  margin: 20px 0;
+  padding: 10px;
+  background: #fbfaf5;
+}
+
+.comments_box .comment .name{
+  font-size: 16px;
+}
+
+.comments_box .comment .text{
+  font-size: 16px;
+}
+

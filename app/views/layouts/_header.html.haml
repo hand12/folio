@@ -1,0 +1,13 @@
+%section.banner{role: "banner"}
+  %header#header
+    .header-content.clearfix
+      = link_to "タイトル", root_path, class: "title"
+      %nav.navigation{role: "navigation"}
+        %ul.primary-nav
+          %li.trigger
+            投稿する
+          %li
+            ログアウト
+      %a.nav-toggle{:href => "#"}
+        Menu
+        %span

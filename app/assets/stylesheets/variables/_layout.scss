@@ -1,0 +1,13 @@
+/* sizes */
+
+/* common.scssのcol関連の記述の上の方で使ってます。
+break_pointを設定するだけでcolの切り替わり位置が変わります。 */
+$large_break_point: 1200px;
+$page_padding: 15px;
+$col_margin: 20px;
+$laptop_width: 992px;
+$tablet_width: 768px;
+$header_height: 30px;
+
+/* font size */
+$default_text: 13px;

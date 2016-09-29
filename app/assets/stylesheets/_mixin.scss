@@ -1,0 +1,21 @@
+@mixin label_colored($color) {
+  padding: 0 5px;
+  font-size: 10px;
+  line-height: 20px;
+  background-color: $color;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #fff;
+  font-weight: lighter;
+}
+
+@mixin label($color) {
+  padding: 0 5px;
+  font-size: 10px;
+  line-height: 20px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: $color;
+  font-weight: lighter;
+  border: 1px solid $color;
+}

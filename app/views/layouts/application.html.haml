@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    = render partial: "layouts/meta"
+  %body
+    = render partial: "layouts/header"
+    = yield
+    = render partial: 'products/post'
+    = render partial: 'layouts/footer'
