@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(create_params)
     if @product.save
+      create_parents_instance
       flash[:notice] = "投稿完了しました"
       redirect_to :root
     else
@@ -28,12 +29,24 @@ class ProductsController < ApplicationController
     params.require(:product).permit(
       :title,
       :catchcopy,
-      :concept
+      :concept,
+      :college_name,
+      :lecture_title,
+      product_images_attributes: [:id, :image, :status]
       )
   end
 
   def set_new_product
     @product = Product.new
+    @product.product_images.build
+  end
+
+  def create_parents_instance
+    college = College.where(college_name: params[:product][:college_name]).first_or_create
+    lecture = Lecture.where(lecture_title: params[:product][:lecture_title]).first_or_create
+    @product.college_id = college.id
+    @product.lecture_id = lecture.id
+    @product.save
   end
 
 end
