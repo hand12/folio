@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929121632) do
+ActiveRecord::Schema.define(version: 20160929130957) do
 
   create_table "colleges", force: :cascade do |t|
     t.string   "college_name", limit: 255
@@ -32,13 +32,31 @@ ActiveRecord::Schema.define(version: 20160929121632) do
 
   add_index "lectures", ["college_id"], name: "fk_rails_6f14f944aa", using: :btree
 
-  create_table "products", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.text     "concept",    limit: 65535
-    t.string   "catchcopy",  limit: 255
+  create_table "product_images", force: :cascade do |t|
+    t.text     "image",      limit: 65535
+    t.integer  "product_id", limit: 4
+    t.integer  "status",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "product_images", ["product_id"], name: "index_product_images_on_product_id", using: :btree
+
+  create_table "products", force: :cascade do |t|
+    t.string   "title",            limit: 255
+    t.text     "concept",          limit: 65535
+    t.string   "catchcopy",        limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "product_image_id", limit: 4
+    t.integer  "college_id",       limit: 4
+    t.integer  "lecture_id",       limit: 4
+  end
+
+  add_index "products", ["college_id"], name: "index_products_on_college_id", using: :btree
+  add_index "products", ["lecture_id"], name: "index_products_on_lecture_id", using: :btree
+  add_index "products", ["product_image_id"], name: "index_products_on_product_image_id", using: :btree
+
   add_foreign_key "lectures", "colleges"
+  add_foreign_key "product_images", "products"
 end
