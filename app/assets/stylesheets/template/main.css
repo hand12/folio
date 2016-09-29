@@ -477,12 +477,17 @@ line-height:27px;
 	Contact form
 -------------------------------------------------------------------------------*/
 
+.conForm {
+  text-align: center;
+}
+
 .conForm input {
+  width: 80%;
 	background:#fafafa;
 	color:#797979;
 	padding:15px 30px;
 	border:none;
-	margin-right:3%;
+	margin: 0 auto;
 	margin-bottom:30px;
 	outline:none;
 	font-style:normal;
@@ -493,12 +498,13 @@ line-height:27px;
 	margin-right:0px;
 }
 .conForm textarea {
+  width: 80%;
 	background:#fafafa;
 	color:#797979;
 	padding:15px 30px;
 	margin-bottom:18px;
 	outline:none;
-	height:300px;
+	height:100px;
 	font-style:normal;
 	resize:none;
 	font-size:15px;
@@ -509,7 +515,7 @@ line-height:27px;
 .conForm .submitBnt {
 	background:#3bc492;
 	color: #fff;
-		padding: 15px 40px;
+	padding: 15px;
 	font-size: 13px;
 	font-weight: 600;
 	letter-spacing: 5px;
