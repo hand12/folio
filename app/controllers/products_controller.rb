@@ -1,7 +1,14 @@
 class ProductsController < ApplicationController
+  before_action :set_new_product
   def index
     @products = Product.order("created_at DESC")
-    @product = Product.new
+  end
+
+  def new
+    # @product = Product.new
+  end
+
+  def show
   end
 
   def create
@@ -22,6 +29,10 @@ class ProductsController < ApplicationController
       :catchcopy,
       :concept
       )
+  end
+
+  def set_new_product
+    @product = Product.new
   end
 
 end
