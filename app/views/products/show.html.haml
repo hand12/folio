@@ -2,13 +2,13 @@
   .product_box.col-md-9.col-xs-10
     .catchcopy
       %h3
-        キャッチコピー/catchcopy
+        = @product.catchcopy
     .main_image
       = image_tag "outsource.jpg", class: "image"
 
     .product_title.no-padding
       %h3
-        タイトル/title
+        = @product.title
 
     .college.no-padding
       %h3
@@ -16,7 +16,7 @@
 
     .concept.no-padding
       %p
-        この作品は、ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ。
+        = @product.concept
 
     .tag
       %ul.clearfix
