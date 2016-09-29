@@ -4,8 +4,8 @@
       = link_to "タイトル", root_path, class: "title"
       %nav.navigation{role: "navigation"}
         %ul.primary-nav
-          %li
-            = link_to "投稿する", new_product_path, remote: true, method: :get
+          %li.trigger
+            投稿する
           %li
             ログアウト
       %a.nav-toggle{:href => "#"}

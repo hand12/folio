@@ -48,4 +48,3 @@ end
 
 gem 'haml-rails'
 gem 'erb2haml'
-gem 'pry-rails'

@@ -1,15 +1,7 @@
 class ProductsController < ApplicationController
-  before_action :set_new_product
   def index
     @products = Product.order("created_at DESC")
-  end
-
-  def new
-    # @product = Product.new
-  end
-
-  def show
-    @product = Product.find(params[:id])
+    @product = Product.new
   end
 
   def create
@@ -30,10 +22,6 @@ class ProductsController < ApplicationController
       :catchcopy,
       :concept
       )
-  end
-
-  def set_new_product
-    @product = Product.new
   end
 
 end
