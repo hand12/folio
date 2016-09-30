@@ -1,0 +1,14 @@
+.modal-content.post_lecture_comment_modal
+  %section#teams.section.teams
+    .row
+      .col-md-12.col-sm-12.conForm
+        .contact
+          = form_for @lecture_comment do |f|
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.select :difficulty, ["評価", 1, 2, 3, 4, 5],placeholder: "評価", value: "評価"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_area :comment, placeholder: "この授業の口コミを教えてください。"
+              = f.hidden_field :lecture_id, value: @product.lecture.id
+              = f.hidden_field :product_id, value: @product.id
+            = f.submit "投稿する", class: "submitBnt"
+            #simple-msg

@@ -11,9 +11,17 @@
       %h3
         = @product.title
 
-    .college.no-padding
+    .college.no-padding.clearfix
       %h3
         = @product.college_lecture_name
+
+      %ul.links
+        %li.link
+          = link_to "#{@product.col_name}ってどんな大学？", new_lecture_path, remote: true
+        -# %li.link
+        -#   = link_to "#{@product.lec_title}ってどんな授業？", new_lecture_comment_path, remote: true
+        %li.link
+          = link_to "#{@product.lec_title}のクチコミをみる。", lecture_path(@product.lecture)
 
     .concept.no-padding
       %p
@@ -57,5 +65,6 @@
     - @product.image_boies.each_with_index do |image, i|
       %li
         = image_tag image.image.large, class:"#{i} hide_image"
+= render partial: './panel'
 
-= render partial: 'products/edit_product'
+

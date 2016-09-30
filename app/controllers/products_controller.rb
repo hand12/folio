@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @lecture_comment = LectureComment.new
   end
 
   def edit
