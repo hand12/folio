@@ -69,12 +69,11 @@ hr {
 }
 
 .images_box{
-  letter-spacing: -.4em;
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
   overflow: hidden;
   margin: 10px 0;
-  max-height: 150px;
+  height: 150px;
 }
 
 .images_box .container ul li{
@@ -85,7 +84,9 @@ hr {
 }
 
 .images_box .container ul li img{
-  max-height: 150px;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .images_box ul li:hover img {
@@ -97,6 +98,67 @@ hr {
   transform: scale(1.2);
 }
 
+.image_panel{
+  z-index: 900;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.extension_image{
+  list-style: none;
+  height: 70vh;
+  width: 60%;
+  overflow: scroll;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  padding: 20px;
+  /*border: 2px solid #aaa;*/
+  background: #fff;
+  z-index: 950;
+  display: none;
+  text-align: center;
+}
+
+
+.hide_image {
+  list-style: none;
+  display: none;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+}
+
+.cover:hover{
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  opacity: 1;
+}
+
+.cover p{
+  font-family: chogokubosogothic;
+  line-height: 100px;
+  margin: 25px auto;
+  width: 60%;
+  height: 60%;
+  border: 1px solid #fff;
+  color: #fff;
+}
 .shere{
   margin: 20px 10px 10px 0;
   padding: 10px 10px;
@@ -128,4 +190,3 @@ hr {
 .comments_box .comment .text{
   font-size: 16px;
 }
-

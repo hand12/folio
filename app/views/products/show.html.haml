@@ -4,7 +4,8 @@
       %h3
         = @product.catchcopy
     .main_image
-      = image_tag "outsource.jpg", class: "image"
+      -# = image_tag "outsource.jpg", class: "image"
+      = image_tag @product.main_image, class: "image"
 
     .product_title.no-padding
       %h3
@@ -12,7 +13,7 @@
 
     .college.no-padding
       %h3
-        学校名/授業名
+        = @product.college_lecture_name
 
     .concept.no-padding
       %p
@@ -33,14 +34,12 @@
     .images_box.clearfix
       .container
         %ul.row
-          %li.col-md-2.col-xs-8
-            = image_tag "work-1.jpg"
-          %li.col-md-2.col-xs-8
-            = image_tag "work-1.jpg"
-          %li.col-md-2.col-xs-8
-            = image_tag "work-1.jpg"
-          %li.col-md-2.col-xs-8
-            = image_tag "work-1.jpg"
+          - @product.image_boies.each_with_index do |image, i|
+            %li.col-md-3.col-xs-8
+              = image_tag image.image.thumb
+              .cover{class:"#{i}"}
+                %p
+                  click
 
     .shere.col-md-2.col-xs-6
       .like
@@ -53,3 +52,8 @@
           山下悠介
         %p.text
           素敵な作品だと思います。
+.image_panel.clearfix
+  .extension_image
+    - @product.image_boies.each_with_index do |image, i|
+      %li
+        = image_tag image.image.large, class:"#{i} hide_image"

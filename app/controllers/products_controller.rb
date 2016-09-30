@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = Product.eager_load(:lecture, :college, :product_images).find(params[:id])
   end
 
   def create
