@@ -8,7 +8,7 @@
  #header.fixed .header-content {
  padding: 17px 0;
 }
- .nav-toggle {
+ /*.nav-toggle {
  display: block;
 }
  .navigation {
@@ -41,7 +41,7 @@
  font-size: 25px;
  margin: 0;
  text-align: center;
-}
+}*/
  .person {
  margin: 0 auto 50px;
 }

@@ -1,13 +1,16 @@
-%section.banner{role: "banner"}
+%section.banner
   %header#header
     .header-content.clearfix
       = link_to "タイトル", root_path, class: "title"
-      %nav.navigation{role: "navigation"}
+      %nav.navigation
         %ul.primary-nav
-          %li
-            = link_to "投稿する", new_product_path, remote: true, method: :get
-          %li
-            ログアウト
-      %a.nav-toggle{:href => "#"}
-        Menu
-        %span
+          - if controller.action_name == "show"
+            %li
+              = link_to "編集する", edit_product_path(params[:id]), remote: true, method: :get
+            %li
+              = link_to "ログアウト", edit_product_path(params[:id]), remote: true, method: :get
+          - else
+            %li
+              = link_to "投稿する", new_product_path, remote: true, method: :get
+            %li
+              ログアウト
