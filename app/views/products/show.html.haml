@@ -57,3 +57,5 @@
     - @product.image_boies.each_with_index do |image, i|
       %li
         = image_tag image.image.large, class:"#{i} hide_image"
+
+= render partial: 'products/edit_product'
