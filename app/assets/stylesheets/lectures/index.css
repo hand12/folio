@@ -1,0 +1,75 @@
+.lecture_box {
+  padding-top: 120px;
+  float: none;
+  margin: 0 auto;
+}
+
+.lecture_title{
+/*  margin-top: 150px;*/
+  margin-bottom: 20px;
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  border-left: solid 5px #C3D825;
+}
+
+.lecture_title h3{
+  padding-left: 10px ;
+  font-size: 36px;
+}
+
+ul .college_teacher{
+  list-style: none;
+}
+
+ul.college_teacher li{
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  margin-right: 10px;
+  float: left;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.lecture_content{
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.lecture_comments {
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  border: 2px solid #c3d825;
+  margin: 10px 0;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  /*background-color: #c3d825;*/
+}
+
+.lecture_difficulty {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.lecture_comment {
+  font-size: 16px;
+}
+
+.post_comment{
+  margin-top: 20px;
+  padding: 15px 0;
+  text-align: center;
+  background: #c3d825;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  box-shadow: 0 2px 0 #69821b;
+}
+
+.post_comment a{
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  font-size: 24px;
+  color: #000;
+}
+
+.post_comment a:hover{
+  color: #fff;
+}

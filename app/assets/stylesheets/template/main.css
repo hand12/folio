@@ -420,7 +420,6 @@ line-height:27px;
 }
 
 .modal-content {
-  height: 80vh;
   overflow: scroll;
   width: 50%;
   top: 80px;
@@ -465,3 +464,18 @@ section#teams{
   padding: 20px 0;
 }
 
+select {
+  float: left;
+  margin: 10px 5%;
+  /*width: 90%;*/
+  padding: 15px 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background:#fafafa;
+  color:#797979;
+  border:#f4f3f3 1px solid;
+  font-size:15px;
+}
