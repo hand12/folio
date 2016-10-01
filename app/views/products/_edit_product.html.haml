@@ -1,27 +1,26 @@
-.panel.clearfix
-  .modal-content
-    %section#teams.section.teams
-      .row
-        .col-md-12.col-sm-12.conForm
-          .contact
-            = form_for @product do |f|
+.modal-content.edit_modal
+  %section#teams.section.teams
+    .row
+      .col-md-12.col-sm-12.conForm
+        .contact
+          = form_for @product do |f|
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :title
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :catchcopy
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_area :concept
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :college_name, value: @product.col_name
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :lecture_title, value: @product.lec_title
+            = f.fields_for :product_images, @product_images.main.first do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :title
+                = ff.file_field :image
+                = ff.hidden_field :status, value: "main"
+            = f.fields_for :product_images, @product_images.sub do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :catchcopy
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_area :concept
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :college_name, value: @product.col_name
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :lecture_title, value: @product.lec_title
-              = f.fields_for :product_images, @product_images.main.first do |ff|
-                .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                  = ff.file_field :image
-                  = ff.hidden_field :status, value: "main"
-              = f.fields_for :product_images, @product_images.sub do |ff|
-                .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                  = ff.file_field :image
-                  = ff.hidden_field :status, value: "sub"
-              = f.submit "更新する", class: "submitBnt"
-              #simple-msg
+                = ff.file_field :image
+                = ff.hidden_field :status, value: "sub"
+            = f.submit "更新する", class: "submitBnt"
+            #simple-msg

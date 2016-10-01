@@ -1,0 +1,36 @@
+%section.no-padding.container
+  .col-md-9.col-xs-10.col-lg-9.lecture_box
+    .lecture_title
+      %h3
+        = @lecture.lecture_title
+
+    %ul.college_teacher.clearfix
+      %li.lecture_college
+        = @lecture.college.college_name
+      %li.lecture_teacher
+        = @lecture.teacher if @lecture.teacher
+
+    .lecture_content
+      %p
+        = @lecture.content if @lecture.content
+
+    %h3
+      みんなのクチコミ
+    - if @lecture_comments.nil?
+      %h3
+        まだクチコミはありません。
+    - @lecture_comments.each do |comment|
+      .lecture_comments
+        .lecture_difficulty
+          評価#{comment.difficulty}
+        .lecture_comment
+          = comment.comment
+
+    .post_comment
+      = link_to "#{@lecture.lecture_title}のクチコミを投稿する", new_lecture_comment_path, remote: true
+
+.panel.clearfix
+  = render partial: 'lecture_comments/lecture_comment_post'
+  = render partial: 'products/post'
+
+

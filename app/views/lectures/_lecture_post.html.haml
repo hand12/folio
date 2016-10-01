@@ -1,0 +1,14 @@
+.modal-content.post_lecture_modal
+  %section#teams.section.teams
+    .row
+      .col-md-12.col-sm-12.conForm
+        .contact
+          = form_for @lecture do |f|
+            -# .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            -#   = f.text_field :lecture_title, placeholder: "授業の名前を入力して下さい。", value: @product.lec_title
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :teacher, placeholder: "教授の名前は何ですか？"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_area :content, placeholder: "どんな授業ですか？"
+            = f.submit "投稿する", class: "submitBnt"
+            #simple-msg

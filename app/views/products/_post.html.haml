@@ -1,28 +1,27 @@
-.panel.clearfix
-  .modal-content
-    %section#teams.section.teams
-      .row
-        .col-md-12.col-sm-12.conForm
-          .contact
-            = form_for @product do |f|
+.modal-content
+  %section#teams.section.teams
+    .row
+      .col-md-12.col-sm-12.conForm
+        .contact
+          = form_for @product do |f|
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :title, placeholder: "作品のタイトルを入力して下さい。"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :catchcopy, placeholder: "作品のキャッチコピーを入力して下さい。"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_area :concept, placeholder: "作品のコンセプトを入力して下さい。"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :college_name, placeholder: "どの学校の課題ですか？"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :lecture_title, placeholder: "授業名は何ですか？"
+            = f.fields_for :product_images do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :title, placeholder: "作品のタイトルを入力して下さい。"
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :catchcopy, placeholder: "作品のキャッチコピーを入力して下さい。"
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_area :concept, placeholder: "作品のコンセプトを入力して下さい。"
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :college_name, placeholder: "どの学校の課題ですか？"
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                = f.text_field :lecture_title, placeholder: "授業名は何ですか？"
-              = f.fields_for :product_images do |ff|
-                .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                  = ff.file_field :image
-                  = ff.hidden_field :status, value: "main"
-                - 3.times do |i|
-                  = f.fields_for :product_images do |ff|
-                    .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                      = ff.file_field :image
-                      = ff.hidden_field :status, value: "sub"
-              = f.submit "投稿する", class: "submitBnt"
-              #simple-msg
+                = ff.file_field :image
+                = ff.hidden_field :status, value: "main"
+              - 3.times do |i|
+                = f.fields_for :product_images do |ff|
+                  .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    = ff.file_field :image
+                    = ff.hidden_field :status, value: "sub"
+            = f.submit "投稿する", class: "submitBnt"
+            #simple-msg
