@@ -424,6 +424,7 @@ line-height:27px;
   width: 50%;
   top: 80px;
   left: 25%;
+  max-height: 80vh;
   position: absolute;
   padding: 10px 20px;
   border: 2px solid #aaa;
