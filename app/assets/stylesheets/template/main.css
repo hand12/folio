@@ -349,7 +349,10 @@ line-height:27px;
 }
 
 .conForm input {
-  width: 80%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 	background:#fafafa;
 	color:#797979;
 	padding:15px 30px;
@@ -365,7 +368,10 @@ line-height:27px;
 	margin-right:0px;
 }
 .conForm textarea {
-  width: 80%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 	background:#fafafa;
 	color:#797979;
 	padding:15px 30px;
@@ -380,6 +386,10 @@ line-height:27px;
 
 
 .conForm .submitBnt {
+  width: 60%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 	background:#3bc492;
 	color: #fff;
 	padding: 15px;

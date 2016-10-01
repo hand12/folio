@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :products
   resources :lectures
   resources :lecture_comments
+  resources :product_comments
   get 'products/show' => 'introductions#show'
 end
