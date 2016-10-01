@@ -16,7 +16,9 @@
 
     %h3
       みんなのクチコミ
-
+    - if @lecture_comments.nil?
+      %h3
+        まだクチコミはありません。
     - @lecture_comments.each do |comment|
       .lecture_comments
         .lecture_difficulty
@@ -29,5 +31,6 @@
 
 .panel.clearfix
   = render partial: 'lecture_comments/lecture_comment_post'
+  = render partial: 'products/post'
 
 

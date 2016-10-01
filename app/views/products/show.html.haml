@@ -16,10 +16,10 @@
         = @product.college_lecture_name
 
       %ul.links
-        %li.link
-          = link_to "#{@product.col_name}ってどんな大学？", new_lecture_path, remote: true
         -# %li.link
-        -#   = link_to "#{@product.lec_title}ってどんな授業？", new_lecture_comment_path, remote: true
+        -#   = link_to "#{@product.col_name}ってどんな大学？", new_lecture_path, remote: true
+        %li.link
+          = link_to "#{@product.lec_title}ってどんな授業？", edit_lecture_path(@product.lecture), remote: true
         %li.link
           = link_to "#{@product.lec_title}のクチコミをみる。", lecture_path(@product.lecture)
 
