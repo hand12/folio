@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
     # @lecture = Lecture.new
     # @lecture = @product.lecture
     @lecture = Lecture.find(@product.lecture.id)
+    @product_comment = ProductComment.new
   end
 
   def edit

@@ -54,12 +54,17 @@
         %p
           いいね
 
-    .comments_box
-      .comment
-        %p.name
-          山下悠介
-        %p.text
-          素敵な作品だと思います。
+    %h3.comment_title
+      この作品に対するコメント
+
+    #js-comments
+      = render partial: 'products/product_comment.html.haml', collection: @product.product_comments
+
+    .comment_form.conForm
+      = form_for @product_comment, remote: true do |f|
+        = f.text_area :content, placeholder: "この作品に対する感想を教えてください。", id: "js-comment_field"
+        = f.hidden_field :product_id, value: @product.id
+        = f.submit "投稿する", class: "submitBnt"
 .image_panel.clearfix
   .extension_image
     - @product.image_boies.each_with_index do |image, i|

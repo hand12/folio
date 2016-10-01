@@ -195,10 +195,23 @@ hr {
   color: #FFF;
 }
 
+.comment_title{
+  margin-top: 30px;
+}
+
 .comments_box {
-  margin: 20px 0;
-  padding: 10px;
-  background: #fbfaf5;
+  margin-bottom: 20px;
+/*  margin: 20px 0 50px;
+  padding: 10px;*/
+}
+
+.comments_box .comment .name{
+  padding: 10px 0 0;
+  border-top: 1px solid #c3d825;
+}
+
+.comments_box .text{
+  padding-bottom: 20px;
 }
 
 .comments_box .comment .name{
@@ -207,4 +220,9 @@ hr {
 
 .comments_box .comment .text{
   font-size: 16px;
+}
+
+.comment_form{
+  margin-top: 30px;
+  /*border: 1px solid;*/
 }
