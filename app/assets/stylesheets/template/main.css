@@ -490,3 +490,8 @@ select {
   border:#f4f3f3 1px solid;
   font-size:15px;
 }
+
+.center {
+  margin: 0 auto;
+  float: none;
+}

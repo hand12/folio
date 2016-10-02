@@ -4,13 +4,17 @@
       = link_to "タイトル", root_path, class: "title"
       %nav.navigation
         %ul.primary-nav
-          - if controller.action_name == "show" && controller.controller_name == "products"
+          - if user_signed_in?
             %li
-              = link_to "編集する", edit_product_path(params[:id]), remote: true, method: :get
-            %li
-              = link_to "ログアウト", edit_product_path(params[:id]), remote: true, method: :get
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+              - if controller.action_name == "show" && controller.controller_name == "products"
+                %li
+                  = link_to "編集する", edit_product_path(params[:id]), remote: true, method: :get
+              - else
+                %li
+                  = link_to "投稿する", new_product_path, remote: true, method: :get
           - else
             %li
-              = link_to "投稿する", new_product_path, remote: true, method: :get
+              = link_to "ログイン", new_user_session_path
             %li
-              ログアウト
+              = link_to "新規登録", new_user_registration_path
