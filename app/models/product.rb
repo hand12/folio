@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :college
   belongs_to :lecture
+  belongs_to :user
   has_many :product_images, dependent: :destroy
   has_many :product_comments, dependent: :destroy
   accepts_nested_attributes_for :product_images, reject_if: :reject_images
