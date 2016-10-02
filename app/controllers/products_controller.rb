@@ -49,7 +49,6 @@ class ProductsController < ApplicationController
       :title,
       :catchcopy,
       :concept,
-      :college_name,
       :lecture_title,
       product_images_attributes: [:id, :image, :status]
       ).merge(user_id: current_user.id)
@@ -60,7 +59,6 @@ class ProductsController < ApplicationController
       :title,
       :catchcopy,
       :concept,
-      :college_name,
       :lecture_title,
       product_images_attributes: [:id, :image, :status]
       ).merge(user_id: current_user.id)
@@ -72,7 +70,7 @@ class ProductsController < ApplicationController
   end
 
   def save_parents_instance
-    college = College.where(college_name: params[:product][:college_name]).first_or_create
+    college = College.where(college_name: current_user.college_name).first_or_create
     lecture = Lecture.where(lecture_title: params[:product][:lecture_title]).first_or_create
     lecture.college_id = college.id
     @product.college_id = college.id
