@@ -10,8 +10,8 @@
               = f.text_field :catchcopy
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
               = f.text_area :concept
-            .col-xs-12.col-sm-12.col-md-12.col-lg-12
-              = f.text_field :college_name, value: @product.col_name
+            -# .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            -#   = f.text_field :college_name, value: @product.col_name
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
               = f.text_field :lecture_title, value: @product.lec_title
             = f.fields_for :product_images, @product_images.main.first do |ff|
