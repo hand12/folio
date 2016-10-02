@@ -19,10 +19,12 @@
 // })
 $(".panel").fadeIn("slow");
 $(".modal-content").fadeIn("slow");
+$("#header").fadeOut("slow");
 
 $(".panel").click(
 function(){
 $(this).fadeOut("slow");
+$("#header").fadeIn("slow");
 })
 
 $(".modal-content").on('click', function(e) {
