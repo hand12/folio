@@ -11,17 +11,28 @@
       %h3
         = @product.title
 
-    .college.no-padding.clearfix
-      %h3
-        = @product.college_lecture_name
+    .user_info.clearfix
+      .col-md-1.col-xs-3.col-lg-1.avatar_box
+        .avatar
+          = image_tag @product.user.avatar.thumb
 
-      %ul.links
-        -# %li.link
-        -#   = link_to "#{@product.col_name}ってどんな大学？", new_lecture_path, remote: true
+      .col-md-8.col-xs-6.user_name_college
+        .product_user_name
+          %h3
+            投稿者 #{@product.user.name}
+
+        .college.no-padding.clearfix
+          %h3
+            = @product.college_lecture_name
+
+    %ul.links.clearfix
+      -# %li.link
+      -#   = link_to "#{@product.col_name}ってどんな大学？", new_lecture_path, remote: true
+      - if user_signed_in?
         %li.link
           = link_to "#{@product.lec_title}ってどんな授業？", edit_lecture_path(@product.lecture), remote: true
-        %li.link
-          = link_to "#{@product.lec_title}のクチコミをみる。", lecture_path(@product.lecture)
+      %li.link
+        = link_to "#{@product.lec_title}のクチコミをみる。", lecture_path(@product.lecture)
 
     .concept.no-padding
       %p
@@ -60,11 +71,15 @@
     #js-comments
       = render partial: 'products/product_comment.html.haml', collection: @product.product_comments
 
-    .comment_form.conForm
-      = form_for @product_comment, remote: true do |f|
-        = f.text_area :content, placeholder: "この作品に対する感想を教えてください。", id: "js-comment_field"
-        = f.hidden_field :product_id, value: @product.id
-        = f.submit "投稿する", class: "submitBnt"
+    - if user_signed_in?
+      .comment_form.conForm
+        = form_for @product_comment, remote: true do |f|
+          = f.text_area :content, placeholder: "この作品に対する感想を教えてください。", id: "js-comment_field"
+          = f.hidden_field :product_id, value: @product.id
+          = f.submit "投稿する", class: "submitBnt"
+    - else
+      .comment_login_message
+        = link_to "ログインしてこの作品に対するコメントを投稿しよう！", new_user_registration_path
 .image_panel.clearfix
   .extension_image
     - @product.image_boies.each_with_index do |image, i|

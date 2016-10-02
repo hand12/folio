@@ -1,6 +1,10 @@
-.comments_box
-  .comment.lecture_comments
-    %p.text
-      = product_comment.content
+.comments_box.clearfix
+  .comment_avatar_box
+    .comment_avatar
+      = image_tag product_comment.user.avatar.thumb
     %p.name
-      山下悠介
+      = product_comment.user.name
+  .comment_message
+    .comment.lecture_comments
+      %p.text
+        = product_comment.content

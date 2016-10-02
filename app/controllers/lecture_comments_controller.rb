@@ -1,4 +1,5 @@
 class LectureCommentsController < ApplicationController
+  before_action :authenticate_user!, only: :create
   def create
     @lecture_comment = LectureComment.new(create_params)
     if @lecture_comment.save
@@ -15,6 +16,6 @@ class LectureCommentsController < ApplicationController
     params.require(:lecture_comment).permit(
       :difficulty,
       :comment,
-      :lecture_id)
+      :lecture_id).merge(user_id: current_user.id)
   end
 end

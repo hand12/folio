@@ -183,17 +183,19 @@ ul li {
 	Works
 -------------------------------------------------------------------------------*/
 .work {
-  -moz-box-shadow: 0 0 0 1px #fff;
+/*  -moz-box-shadow: 0 0 0 1px #fff;
   -webkit-box-shadow: 0 0 0 1px #fff;
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #fff;*/
 
   overflow: hidden;
   /*ボックスに入りきらなかったのもをどうするか。*/
   position: relative;
   height: 250px;
+  background-color: #FFF;
 }
 
 .work_box{
+  background-color: #FFF;
   width: 100%;
   /*height: 100%;*/
   height: 250px;
@@ -386,7 +388,7 @@ line-height:27px;
 
 
 .conForm .submitBnt {
-  width: 60%;
+  width: 100%;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -489,4 +491,9 @@ select {
   color:#797979;
   border:#f4f3f3 1px solid;
   font-size:15px;
+}
+
+.center {
+  margin: 0 auto;
+  float: none;
 }

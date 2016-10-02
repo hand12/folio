@@ -1,4 +1,5 @@
 class ProductCommentsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :destroy]
   def create
     @product_comment = ProductComment.new(create_params)
     @product = Product.find(params[:product_comment][:product_id])
@@ -9,11 +10,14 @@ class ProductCommentsController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   private
   def create_params
     params.require(:product_comment).permit(
       :content,
       :product_id
-      )
+      ).merge(user_id: current_user.id)
   end
 end

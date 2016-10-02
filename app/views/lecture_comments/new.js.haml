@@ -1,9 +1,11 @@
 $(".panel").fadeIn("slow");
 $(".post_lecture_comment_modal").fadeIn("slow");
+$("#header").fadeOut("slow");
 
 $(".panel").click(
 function(){
 $(this).fadeOut("slow");
+$("#header").fadeIn("slow");
 })
 
 $(".modal-content").on('click', function(e) {
