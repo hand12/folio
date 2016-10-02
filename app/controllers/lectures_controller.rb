@@ -1,5 +1,6 @@
 class LecturesController < ApplicationController
   before_action :set_lecture, only: [:show, :update, :edit]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
   def show
     @lecture_comments = LectureComment.where(lecture_id: @lecture.id).order("created_at DESC")
     @lecture_comment = LectureComment.new
@@ -21,12 +22,15 @@ class LecturesController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   private
   def update_params
     params.require(:lecture).permit(
       :teacher,
       :content
-      )
+      ).merge(user_id: current_user.id)
   end
 
   def set_lecture

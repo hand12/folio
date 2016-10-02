@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_new_product
   before_action :set_product, only: [:show, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
     @products = Product.order("created_at DESC")
   end
@@ -51,7 +52,7 @@ class ProductsController < ApplicationController
       :college_name,
       :lecture_title,
       product_images_attributes: [:id, :image, :status]
-      )
+      ).merge(user_id: current_user.id)
   end
 
   def update_params
@@ -62,7 +63,7 @@ class ProductsController < ApplicationController
       :college_name,
       :lecture_title,
       product_images_attributes: [:id, :image, :status]
-      )
+      ).merge(user_id: current_user.id)
   end
 
   def set_new_product
