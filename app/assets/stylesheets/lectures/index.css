@@ -1,10 +1,11 @@
 .lecture_box {
+  font-family: genJyuuGothic-Monospace-ExtraLight;
   padding-top: 120px;
   float: none;
   margin: 0 auto;
 }
 
-.lecture_title{
+.lecture_title {
 /*  margin-top: 150px;*/
   margin-bottom: 20px;
   font-family: genJyuuGothic-Monospace-ExtraLight;
@@ -21,7 +22,6 @@ ul .college_teacher{
 }
 
 ul.college_teacher li{
-  font-family: genJyuuGothic-Monospace-ExtraLight;
   margin-right: 10px;
   float: left;
   font-size: 16px;
@@ -29,30 +29,85 @@ ul.college_teacher li{
 }
 
 .lecture_content{
-  font-family: genJyuuGothic-Monospace-ExtraLight;
+  margin-right: 10px;
   font-size: 16px;
   margin-bottom: 20px;
 }
 
+.kuchikomi {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+
+.lecture_comments_box{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.lecture_comment_avatar_box{
+  width: 100px;
+  float: left;
+  padding: 0;
+}
+
+.lecture_comment_avatar{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.lecture_comment_avatar img{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.lecture_comment_name{
+  margin-top: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.lecture_comment_difficulty{
+  padding: 5px 0 5px 10px;
+  font-size: 16px;
+  font-style: italic;
+  border-bottom: 1px solid #c3d845;
+}
+
+.lecture_comment_box{
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  width: 70%;
+  margin-left: 20px;
+  padding-left: 0;
+  float: left;
+  border: 2px solid #c3d845;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.lecture_comment{
+  padding: 5px 0 10px 10px;
+  margin-bottom: 20px;
+}
+
+
 .lecture_comments {
   font-family: genJyuuGothic-Monospace-ExtraLight;
   border: 2px solid #c3d825;
-  margin: 10px 0;
+  margin-bottom: 20px;
   padding: 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   /*background-color: #c3d825;*/
 }
 
-.lecture_difficulty {
-  font-style: italic;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.lecture_comment {
-  font-size: 16px;
-}
 
 .post_comment{
   margin-top: 20px;

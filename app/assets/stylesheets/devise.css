@@ -3,7 +3,7 @@
   width: 60%;
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .devise_form h2{
@@ -19,11 +19,11 @@
   margin-bottom: 20px;
 }
 
-.devise_shere_link{
+/*.devise_shere_link{
   margin: 0 auto;
   width: 60%;
   border: 2px solid #c3d845;
-}
+}*/
 
 /*.check{
   text-align: left;

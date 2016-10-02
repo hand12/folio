@@ -14,20 +14,30 @@
       %p
         = @lecture.content if @lecture.content
 
-    %h3
-      みんなのクチコミ
+    -# %h3.kuchikomi
+    -#   みんなのクチコミ
     - if @lecture_comments.nil?
       %h3
         まだクチコミはありません。
     - @lecture_comments.each do |comment|
-      .lecture_comments
-        .lecture_difficulty
-          評価#{comment.difficulty}
-        .lecture_comment
-          = comment.comment
+      .lecture_comments_box.clearfix
+        .lecture_comment_avatar_box
+          .lecture_comment_avatar
+            = image_tag comment.user.avatar.thumb
+          .lecture_comment_name
+            = comment.user.name
+        .lecture_comment_box
+          .lecture_comment_difficulty
+            評価#{comment.difficulty}
+          .lecture_comment
+            = comment.comment
 
-    .post_comment
-      = link_to "#{@lecture.lecture_title}のクチコミを投稿する", new_lecture_comment_path, remote: true
+    - if user_signed_in?
+      .post_comment
+        = link_to "#{@lecture.lecture_title}のクチコミを投稿する", new_lecture_comment_path, remote: true
+    - else
+      .comment_login_message
+        = link_to "ログインしてこの授業にに対するクチコミを投稿しよう！", new_user_registration_path
 
 .panel.clearfix
   = render partial: 'lecture_comments/lecture_comment_post'
