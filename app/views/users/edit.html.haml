@@ -1,0 +1,14 @@
+.col-md-12.col-sm-12.conForm
+  .contact.devise_form
+    %h2 登録情報更新
+    = form_for(current_user) do |f|
+      .field
+        = f.text_field :name, autofocus: true, value: current_user.name
+      .field
+        = f.text_area :profile, value: current_user.profile
+      .field
+        = f.file_field :avatar, value: current_user.avatar
+      .field
+        = f.text_field :college_name, value: current_user.college_name
+      .actions
+        = f.submit "更新", class: "submitBnt"

@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :lectures
   has_many :lecture_comments
-  has_many :product
+  has_many :products
   has_many :product_comments
 
   mount_uploader :avatar, AvatarUploader

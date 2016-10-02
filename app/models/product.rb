@@ -14,7 +14,7 @@ class Product < ActiveRecord::Base
   end
 
   def main_image
-    self.product_images.main.first.image
+    self.product_images.main.first.image if self.product_images.main.first.image
   end
 
   def sub_image(num)
