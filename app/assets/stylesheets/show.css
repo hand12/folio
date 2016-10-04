@@ -217,22 +217,29 @@ hr {
   color: #fff;
 }
 .shere{
+  display: inline-block;
   margin: 20px 10px 10px 0;
   padding: 10px 10px;
-  /*border: 2px solid #c3d825;*/
   background: #c3d825;
   border-radius: 2.5px;
   float: none;
 }
 
-.shere.like:hover{
-  -webkit-transition-duration: 0.3s;
-     -moz-transition-duration: 0.3s;
-      -ms-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  color: #FFF;
+.likeBtn li{
+  margin-right: 10px;
+  float: left;
 }
+
+
+/*.create_like{
+  background: #d3381c;
+  border-radius: 2.5px;
+}
+
+.delete_like{
+  background: #c3d825;
+  border-radius: 2.5px;
+}*/
 
 .comment_title{
   margin-top: 30px;
