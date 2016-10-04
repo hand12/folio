@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002112314) do
+ActiveRecord::Schema.define(version: 20161003030443) do
 
   create_table "colleges", force: :cascade do |t|
     t.string   "college_name", limit: 255
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(version: 20161002112314) do
   add_index "lectures", ["college_id"], name: "fk_rails_6f14f944aa", using: :btree
   add_index "lectures", ["user_id"], name: "index_lectures_on_user_id", using: :btree
 
+  create_table "likes", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "likes", ["product_id"], name: "fk_rails_f7ed05ee50", using: :btree
+  add_index "likes", ["user_id"], name: "fk_rails_1e09b5dabf", using: :btree
+
   create_table "product_comments", force: :cascade do |t|
     t.text     "content",    limit: 65535
     t.integer  "product_id", limit: 4
@@ -68,14 +78,15 @@ ActiveRecord::Schema.define(version: 20161002112314) do
   add_index "product_images", ["product_id"], name: "index_product_images_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.text     "concept",    limit: 65535
-    t.string   "catchcopy",  limit: 255
+    t.string   "title",       limit: 255
+    t.text     "concept",     limit: 65535
+    t.string   "catchcopy",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "college_id", limit: 4
-    t.integer  "lecture_id", limit: 4
-    t.integer  "user_id",    limit: 4
+    t.integer  "college_id",  limit: 4
+    t.integer  "lecture_id",  limit: 4
+    t.integer  "user_id",     limit: 4
+    t.integer  "likes_count", limit: 4
   end
 
   add_index "products", ["college_id"], name: "index_products_on_college_id", using: :btree
@@ -106,6 +117,8 @@ ActiveRecord::Schema.define(version: 20161002112314) do
 
   add_foreign_key "lecture_comments", "lectures"
   add_foreign_key "lectures", "colleges"
+  add_foreign_key "likes", "products"
+  add_foreign_key "likes", "users"
   add_foreign_key "product_comments", "products"
   add_foreign_key "product_images", "products"
 end
