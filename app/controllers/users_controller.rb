@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_new_product
+  before_action :authenticate_user!, only: :update
   def show
     @product = Product.new
     @product.product_images.build
+    @user = User.find(params[:id])
   end
 
   def edit

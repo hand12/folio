@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :lecture_comments
   has_many :products
   has_many :product_comments
+  
 
   mount_uploader :avatar, AvatarUploader
 end

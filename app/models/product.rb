@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   belongs_to :user
   has_many :product_images, dependent: :destroy
   has_many :product_comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
   accepts_nested_attributes_for :product_images, reject_if: :reject_images
   attr_accessor :college_name
   attr_accessor :lecture_title
@@ -37,5 +38,9 @@ class Product < ActiveRecord::Base
     college = self.col_name
     lecture = self.lec_title
     return college + "/" + lecture
+  end
+
+  def like_user(user_id)
+    likes.find_by(user_id: user_id)
   end
 end

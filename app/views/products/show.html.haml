@@ -18,7 +18,7 @@
 
       .col-md-8.col-xs-6.user_name_college
         .product_user_name
-          = link_to "投稿者 #{current_user.name}", user_path(current_user)
+          = link_to "投稿者 #{@product.user.name}", user_path(@product.user)
 
         .college.no-padding.clearfix
           %h3
@@ -58,11 +58,8 @@
               .cover{class:"#{i}"}
                 %p
                   click
-
-    .shere.col-md-2.col-xs-6
-      .like
-        %p
-          いいね
+    #js-like
+      = render partial: './likes/like', locals: {product: @product}
 
     %h3.comment_title
       この作品に対するコメント
