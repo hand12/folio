@@ -1,0 +1,33 @@
+.img_upload{
+ /* background: image-url("noimage-big.png") #fff no-repeat center center;
+    height: 500px;*/
+}
+
+.img_upload input{
+  display: none;
+}
+
+/*.sub_img_upload input{
+  display: none;
+}*/
+
+label{
+  border: 2px solid #c3d845;
+  background-color: #FFF;
+  display: block;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  color: #afafb0;
+}
+
+label:hover{
+  color: #c3d845;
+  cursor: pointer;
+}
+
+.preview_image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 50px;
+}

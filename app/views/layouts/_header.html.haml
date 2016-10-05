@@ -12,6 +12,9 @@
               - if controller.action_name == "show" && controller.controller_name == "products"
                 %li
                   = link_to "編集する", edit_product_path(params[:id]), remote: true, method: :get
+              - elsif controller.controller_name == "users"
+                %li
+                  #{current_user.name}さんのマイページ
               - else
                 %li
                   = link_to "投稿する", new_product_path, remote: true, method: :get
