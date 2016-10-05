@@ -20,6 +20,7 @@
 }
 
 .user_edit{
+  box-shadow: 0 2px 0 #69821b;
   line-height: 40px;
   height: 40px;
   width: 250px;

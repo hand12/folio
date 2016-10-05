@@ -44,3 +44,7 @@
   display: block;
 }
 */
+
+.avatar_form input {
+  display: none;
+}

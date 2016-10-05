@@ -7,7 +7,8 @@
         = f.text_field :name, autofocus: true, placeholder: "ニックネームを決めてください。"
       .field
         = f.text_area :profile, placeholder: "プロフィールを入力してください。"
-      .field
+      .field.avatar_form
+        = f.label :avatar,"アイコン画像を選択してください。"
         = f.file_field :avatar
       .field
         = f.text_field :college_name, placeholder: "大学はどちらですか？"
