@@ -9,9 +9,11 @@
               = link_to "ログアウト", destroy_user_session_path, method: :delete
             %li
               = link_to "マイページへ", user_path(current_user)
-              - if controller.action_name == "show" && controller.controller_name == "products"
+              - if controller.action_name == "show" && controller.controller_name == "products" && @product.user.id == current_user.id
                 %li
                   = link_to "編集する", edit_product_path(params[:id]), remote: true, method: :get
+                %li
+                  = link_to "削除する", product_path(params[:id]), method: :delete
               - elsif controller.controller_name == "users"
                 %li
                   #{current_user.name}さんのマイページ

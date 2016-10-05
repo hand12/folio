@@ -8,3 +8,6 @@
     .comment.lecture_comments
       %p.text
         = product_comment.content
+      - if product_comment.user.id == current_user.id
+        .delete_btn
+          = link_to "このコメントを削除する。", product_comment_path(product_comment.id), method: :delete

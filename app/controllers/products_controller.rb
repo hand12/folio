@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_new_product
-  before_action :set_product, only: [:show, :edit, :update]
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
     @products = Product.order("created_at DESC")
@@ -41,6 +41,11 @@ class ProductsController < ApplicationController
       flash[:notice] = "送信できませんでした。しばらく時間を置いてからもう一度お試し下さい。"
       redirect_to :root
     end
+  end
+
+  def destroy
+    @product.destroy
+    redirect_to :root
   end
 
   private

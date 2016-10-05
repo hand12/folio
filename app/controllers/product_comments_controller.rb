@@ -11,6 +11,10 @@ class ProductCommentsController < ApplicationController
   end
 
   def destroy
+    comment = ProductComment.find(params[:id])
+    comment.destroy
+    flash[:notice] = "コメントを削除しました。"
+    redirect_to :back
   end
 
   private

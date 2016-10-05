@@ -11,6 +11,13 @@ class LectureCommentsController < ApplicationController
     end
   end
 
+  def destroy
+    lecture = LectureComment.find(params[:id])
+    lecture.destroy
+    flash[:notice] = "コメントを削除しました。"
+    redirect_to :back
+  end
+
   private
   def create_params
     params.require(:lecture_comment).permit(

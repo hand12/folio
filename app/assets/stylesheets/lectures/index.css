@@ -46,6 +46,7 @@ ul.college_teacher li{
   margin-bottom: 20px;
 }
 
+
 .lecture_comment_avatar_box{
   width: 100px;
   float: left;
@@ -97,6 +98,18 @@ ul.college_teacher li{
   margin-bottom: 20px;
 }
 
+.lecture_comments .delete_btn{
+  padding: 0;
+}
+
+.delete_btn{
+  font-size: 12px;
+  padding: 5px 0 5px 10px;
+}
+
+.delete_btn a:hover{
+  color: #c3d845;
+}
 
 .lecture_comments {
   font-family: genJyuuGothic-Monospace-ExtraLight;
