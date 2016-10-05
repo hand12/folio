@@ -497,3 +497,21 @@ select {
   margin: 0 auto;
   float: none;
 }
+
+.alert{
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: #d8e698;
+  color: #fff;
+}
+
+.alert .alert-success{
+  background-color: #2792c3;
+}
+
+.alert .alert-danger{
+  background-color: #d3381c;
+}
