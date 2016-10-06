@@ -1,6 +1,11 @@
 class LecturesController < ApplicationController
   before_action :set_lecture, only: [:show, :update, :edit]
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
+
+  def index
+    @lectures = Lecture.order("created_at DESC")
+  end
+
   def show
     @lecture_comments = LectureComment.where(lecture_id: @lecture.id).order("created_at DESC")
     @lecture_comment = LectureComment.new

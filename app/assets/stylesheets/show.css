@@ -127,7 +127,7 @@ hr {
 .images_box{
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
-  overflow: hidden;
+  overflow: scroll;
   margin: 10px 0;
   height: 200px;
   background-color: #FFF;

@@ -1,0 +1,7 @@
+.lecture_box.lecture_index
+  .lecture_title
+    %h3
+      = link_to "#{lecture.lecture_title} / #{lecture.college.college_name}", lecture_path(lecture)
+  .lecture_images_box
+    .lecture_images
+      = render partial: "lectures/lecture_index_product", collection: lecture.products, as: "product"

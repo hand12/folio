@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   resources :products do
     resources :likes, only: [:create, :destroy]
   end
-  resources :lectures
-  resources :lecture_comments
-  resources :product_comments
-  resources :users
+  resources :lectures, only: [:index, :create, :destroy, :edit, :show]
+  resources :lecture_comments, only: [:create, :destroy, :new]
+  resources :product_comments, only: [:create, :destroy]
+  resources :users, only: [:show, :edit, :update]
   get 'products/show' => 'introductions#show'
 end
