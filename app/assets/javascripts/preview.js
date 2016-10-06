@@ -1,7 +1,5 @@
 $(document).on("ready page:load", function(){
 
-  let main_image = "#product_product_images_attributes_0_image"
-
   var i = 0
   var images = []
   while (i < 4){
