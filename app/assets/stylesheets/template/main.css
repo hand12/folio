@@ -92,6 +92,7 @@ ul li {
 	 Header
 -------------------------------------------------------------------------------*/
 #header {
+  font-family: genJyuuGothic-Monospace-ExtraLight;
 	position: fixed;
 	width: 100%;
 	z-index: 999;
@@ -112,6 +113,7 @@ ul li {
 #header .title {
 	float: left;
   font-size: 20px;
+  margin-right: 20px;
 /*  border-bottom: 5px solid #000;*/
 }
 #header.fixed {
@@ -131,7 +133,7 @@ ul li {
 .navigation li {
 	display: inline-block;
   font-size: 19px;
-  font-weight: 700;
+/*  font-weight: 700;*/
   margin-left: 10px;
   padding: 5px;
   /*border: 1px solid #c3d825;*/
