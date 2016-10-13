@@ -8,13 +8,21 @@
 .product_box{
   margin: 0 auto;
   float: none;
+/*  -webkit-box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);
+          box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);*/
+  padding: 20px 20px 0;
+  /*background-color: #fbfaf5;*/
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
 .catchcopy {
+  padding-left: 10px;
+  border-left: solid 1px #C3D825;
   font-family: genJyuuGothic-Monospace-ExtraLight;
   margin: 0 auto 10px;
   font-size: 40px;
-  padding: 0;
+  /*padding: 0;*/
 }
 
 .main_image{
@@ -30,13 +38,13 @@
 
 .product_title{
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  border-left: solid 5px #C3D825;
+  border-left: solid 1px #C3D825;
   font-size: 30px;
-  margin: 20px 0 20px;
+  margin: 20px 0 30px;
 }
 
 .user_info{
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .product_user_name a{
@@ -84,11 +92,12 @@
 
 ul.links{
   color: #FFF;
+  margin-bottom: 20px;
 }
 
 .links li{
-  margin: 0 10px 10px 0;
-  padding: 5px 10px;
+  margin: 0 10px 0 0;
+  padding: 10px 15px;
   float: left;
   /*border: 2px solid #c3d825;*/
   background: #c3d825;
@@ -102,7 +111,16 @@ ul.links{
 
 .concept{
   margin: 10px 0;
+  margin-bottom: 30px;
   font-size: 16px;
+}
+
+.concept .concept_label{
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 5px;
+  /*border-left: 5px solid #c3d845;*/
+  /*padding-left: 10px;*/
 }
 
 hr {
@@ -243,7 +261,7 @@ hr {
 
 .comment_title{
   margin-top: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .comments_box {
@@ -296,7 +314,7 @@ hr {
 }
 
 .comment_form{
-  margin-top: 30px;
+  margin-bottom: 30px;
   /*border: 1px solid;*/
 }
 

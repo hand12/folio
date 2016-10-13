@@ -18,6 +18,8 @@
         = f.password_field :password, autocomplete: "off", placeholder: "パスワードを決めてください。（6文字以上)"
       .field
         = f.password_field :password_confirmation, autocomplete: "off", placeholder: "確認用にもう一度同じパスワードを入力してください。"
+      .field
+        = f.hidden_field :admin, value: "false"
       .actions
         = f.submit "登録", class: "submitBnt"
     = render "devise/shared/links"

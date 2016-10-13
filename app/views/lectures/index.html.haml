@@ -1,6 +1,8 @@
 %section.no-padding.container.lecture_index_container
-  .product_box.col-md-9.col-xs-10
+  .lecture_product_box.col-md-9.col-xs-10
     .lecture_index_title
       %h2
         授業名一覧
     = render partial: 'lectures/lecture_product', collection: @lectures, as: "lecture"
+.panel.clearfix
+  = render partial: 'products/post'
