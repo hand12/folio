@@ -40,11 +40,13 @@
 .user_info_box {
   font-size: 16px;
   padding: 10px 20px;
-  -webkit-box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);
-          box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);
+/*  -webkit-box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);
+          box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);*/
   /*border: 2px solid #c3d845;
   -webkit-border-radius: 10px;
           border-radius: 10px;*/
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
 .user_name{
