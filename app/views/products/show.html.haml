@@ -27,27 +27,29 @@
     %ul.links.clearfix
       -# %li.link
       -#   = link_to "#{@product.col_name}ってどんな大学？", new_lecture_path, remote: true
-      - if user_signed_in?
+      - if user_signed_in? && current_user.admin == "true"
         %li.link
           = link_to "#{@product.lec_title}ってどんな授業？", edit_lecture_path(@product.lecture), remote: true
       %li.link
         = link_to "#{@product.lec_title}のクチコミをみる。", lecture_path(@product.lecture)
 
     .concept.no-padding
-      %p
+      %p.concept_label
+        コンセプト
+      %P
         = @product.concept
 
-    .tag
-      %ul.clearfix
-        %li
-          %p
-            tagA
-        %li
-          %p
-            tagB
-        %li
-          %p
-            tagC
+    -# .tag
+    -#   %ul.clearfix
+    -#     %li
+    -#       %p
+    -#         tagA
+    -#     %li
+    -#       %p
+    -#         tagB
+    -#     %li
+    -#       %p
+    -#         tagC
 
     .images_box.clearfix
       .container

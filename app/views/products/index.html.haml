@@ -1,102 +1,39 @@
--# = render partial: 'introductions/components/keyvisual'
--# = render partial: 'introductions/components/philosophy'
--# = render partial: 'introductions/components/business'
+%section.banner.no-padding
+  .row.background-image
+    .background-cover
+    %h2
+      作品から授業を選べるシラバス
+    %h1
+      クラベル
 
-%section#banner.banner.no-padding
-  .container-fluid
-    .row.no-gutter
-      .flexslider
-        %ul.slides
-          %li
-            .col-md-12
-              %blockquote
-                %h1 タイトル
-                %p 見出し
-/ Text banner section
-/ portfolio section
+%section.no-padding.pt400.clearfix
+  .row.expression
+    %p.expression-title
+      履修登録で悩んだことはありませんか？
+    .contents.clearfix
+      %ul
+        %li
+          .content
+            %h3
+              シラバスのイメージと授業の内容が違った。
+            %p
+              デザイン系の授業はシラバスの文字を読むだけではわかりづらい部分が多く、その授業の本当の良さを伝えきれていない授業が沢山あった。
+        %li
+          .content
+            %h3
+              友達の作品を見て受ければよかったと思った。
+            %p
+              人の作品を見たとき、この授業はこんなに面白そうなことをやるのか、と自分も履修すればよかったと思うことも沢山あった。
+    %p.expression-title
+      作品で授業を選択することにより解決
+    %p.sentense
+      過去の作品から自分の受けたい授業をみつけよう！
+
+
+
+
 %section#works.works.section.no-padding
-  .container-fluid
-    .row.no-gutter
-      = render @products
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-1.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-      -#     / overlay
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-2.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-      -#     / overlay
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-3.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-      -#     / overlay
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-4.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-      -#     / overlay
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-5.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-      -#     / overlay
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-6.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-      -#     / overlay
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-7.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-      -#     / overlay
-      -# .col-lg-3.col-md-3.col-sm-3.work
-      -#   %a.work-box{:href => "products/show"}
-      -#     = image_tag "work-8.jpg"
-      -#     .overlay
-      -#       .overlay-caption
-      -#         %h5 catchcopy
-      -#         %p
-      -#           %i.fa.fa-search-plus.fa-2x
-      -#           %h6 大学名/授業名
-          / overlay
+  .row.no-gutter
+    = render @products
 .panel.clearfix
   = render partial: 'products/post'

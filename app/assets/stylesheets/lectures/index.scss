@@ -1,15 +1,23 @@
 .lecture_box {
   font-family: genJyuuGothic-Monospace-ExtraLight;
   padding-top: 120px;
+  padding-bottom: 10px;
   float: none;
   margin: 0 auto;
+  border-bottom: 1px solid #c8c2be;
+}
+
+.lecture_product_box{
+  margin: 0 auto;
+  float: none;
+  padding: 20px 20px 0;
 }
 
 .lecture_title {
 /*  margin-top: 150px;*/
   margin-bottom: 20px;
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  border-left: solid 5px #C3D825;
+  border-left: solid 1px #C3D825;
 }
 
 .lecture_title h3{
@@ -227,13 +235,17 @@ ul.college_teacher li{
 }
 .lecture_index_title{
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  padding-top: 100px;
+  // padding-top: 100px;
   text-align: left;
   font-size: 36px;
+  margin-top: 100px;
   margin-bottom: 30px;
 }
 .lecture_index_container .lecture_box{
+  // margin-top: 100px;
   padding-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
