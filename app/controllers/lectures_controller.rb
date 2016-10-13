@@ -1,5 +1,6 @@
 class LecturesController < ApplicationController
   before_action :set_lecture, only: [:show, :update, :edit]
+  before_action :set_product, only: [:index, :show]
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   def index
@@ -10,8 +11,6 @@ class LecturesController < ApplicationController
     @lecture_comments = LectureComment.where(lecture_id: @lecture.id).order("created_at DESC")
     @lecture_comment = LectureComment.new
     # @lecture_comment = @lecture.lecture_comments.create
-    @product = Product.new
-    @product.product_images.build
   end
 
   def edit
@@ -40,5 +39,10 @@ class LecturesController < ApplicationController
 
   def set_lecture
     @lecture = Lecture.find(params[:id])
+  end
+
+  def set_product
+    @product = Product.new
+    @product.product_images.build
   end
 end

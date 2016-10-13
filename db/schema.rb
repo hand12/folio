@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003030443) do
+ActiveRecord::Schema.define(version: 20161013065004) do
 
   create_table "colleges", force: :cascade do |t|
     t.string   "college_name", limit: 255
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 20161003030443) do
     t.text     "profile",                limit: 65535
     t.text     "avatar",                 limit: 65535
     t.string   "college_name",           limit: 255
+    t.integer  "admin",                  limit: 4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
