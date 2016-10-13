@@ -1,10 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
-p {
+/*p {
   font-family: Open Sans;
 	font-size: 14px;
 	line-height: 22.4px;
 	color: #6c7279;
-}
+}*/
 h1 {
 	font-size: 65px;
 	color: #2d3033;
@@ -278,7 +278,7 @@ ul li {
     -ms-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-.flex-control-paging li a 
+.flex-control-paging li a
 {
 	background: rgba(255, 255, 255, 0) none repeat scroll 0 0;
 }
@@ -539,7 +539,7 @@ select {
 }
 
 .background-image{
-  background: image-url("bgimage.jpg") no-repeat center;
+  background: url("bgimage.jpg") no-repeat center;
   -webkit-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
