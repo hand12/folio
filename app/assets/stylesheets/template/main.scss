@@ -539,7 +539,7 @@ select {
 }
 
 .background-image{
-  background-image: image-url("bgimage.jpg") no-repeat center;
+  background: image-url('bgimagere.jpg') no-repeat center;
   -webkit-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
