@@ -58,3 +58,4 @@ gem 'fog', '~>1.38.0'
 gem 'dotenv-rails'
 gem 'rails_12factor'
 gem 'execjs'
+gem "therubyracer"
