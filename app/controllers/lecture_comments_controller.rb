@@ -4,7 +4,7 @@ class LectureCommentsController < ApplicationController
     @lecture_comment = LectureComment.new(create_params)
     if @lecture_comment.save
       flash[:notice] = "投稿完了しました。"
-      redirect_to controller: :lectures, action: :show, id: @lecture_comment.lecture.id
+      redirect_to :root
     else
       flash[:notice] = "送信できませんでした。しばらく時間を置いてから送信してください。"
       redirect_to :back
