@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', function(){
   function previewImage(image){
     $(image).change(
       function (){
-        let file = $(this).prop('files')[0];
+        var file = $(this).prop('files')[0];
         if (file.type.match('image.*')) {
           setImage(file, image);
         } else {
