@@ -595,7 +595,24 @@ select {
   padding-top: 30px;
   font-size: 24px;
   text-align: center;
+  margin-bottom: 30px;
 }
+
+.expression .btn {
+  text-align: center;
+  font-weight: 100;
+  padding: 10px;
+  color: #000;
+  font-size: 24px;
+  background: #c3d845;
+  -webkit-border-radius: 2.5px;
+          border-radius: 2.5px;
+  margin-bottom: 30px;
+  a:hover{
+    color: #FFF;
+  }
+}
+
 
 .contents{
   font-size: 16px;
@@ -617,17 +634,17 @@ select {
 }
 
 .contents ul li{
-  float: left;
-  margin: 20px 60px;
+  margin: 20px;
   display: inline;
 }
 
 .content{
   margin: 30px 10px;
-  width: 420px;
+  /*width: 420px;*/
   /*background: #c3d845;*/
   color: #FFF;
-  height: 200px;
+  min-height: 200px;
+  /*height: 200px;*/
   /*-webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,0.3);
           box-shadow: 0 0 1px 0 rgba(0,0,0,0.3);*/
   border-bottom: 1px solid #ccc;
