@@ -8,11 +8,11 @@
 
 %section.no-padding.pt400.clearfix
   .row.expression.container
-    %p.expression-title
+    %p.expression-title.col-xs-8.col-xs-offset-2
       履修登録で悩んだことはありませんか？
     .contents.clearfix
       %ul
-        %li.col-xs-10.col-sm-5.col-md-offset-1
+        %li.col-xs-10.col-sm-5.col-sm-offset-1
           .content
             %h3
               シラバスのイメージと授業の内容が違った。
@@ -24,11 +24,13 @@
               友達の作品を見て受ければよかったと思った。
             %p
               人の作品を見たとき、この授業はこんなに面白そうなことをやるのか、と自分も履修すればよかったと思うことも沢山あった。
-    %p.expression-title
+    %p.expression-title.col-xs-8.col-xs-offset-2
       作品で授業を選択することにより解決
-    %p.sentense
+    %p.sentense.col-xs-8.col-xs-offset-2
       過去の作品から自分の受けたい授業をみつけよう！
-    .btn.col-sm-6.col-sm-offset-3
+      %br
+      また、作品を投稿することによってたくさんの人からのコメント付きのポートフォリオを作成しましょう！
+    .btn.col-xs-6.col-xs-offset-3
       - if user_signed_in?
         = link_to "投稿する", new_product_path, remote: true, method: :get
       - else
