@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :product_images, reject_if: :reject_images
   attr_accessor :college_name
   attr_accessor :lecture_title
-  validates :title, :catchcopy, :concept, presence: true
+  validates :title, :concept, presence: true
 
   def reject_images(attributed)
     attributed['image'].blank?

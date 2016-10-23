@@ -21,5 +21,6 @@
       .field
         = f.hidden_field :admin, value: "false"
       .actions
-        = f.submit "登録", class: "submitBnt"
+        = f.submit class: "submitBnt" do
+          登録
     -# = render "devise/shared/links"

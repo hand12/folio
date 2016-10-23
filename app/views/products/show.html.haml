@@ -1,83 +1,77 @@
-%section#product.no-padding.container
-  .product_box.col-md-9.col-xs-10
-    .catchcopy
-      %h3
-        = @product.catchcopy
-    .main_image
-      -# = image_tag "outsource.jpg", class: "image"
-      = image_tag @product.main_image, class: "image"
+%section.no-padding.clearfix.pt50.mini-background-cover
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      %p.expression-title
+        作品詳細ページ
+      %p.expression-content
+        投稿作品に対して、コメントやイイネを投稿しましょう！
 
-    .product_title.no-padding
-      %h3
+%section.no-padding.clearfix.frame
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      %p.expression-title
         = @product.title
-
-    .user_info.clearfix
-      .col-md-1.col-xs-3.col-lg-1.avatar_box
-        .avatar
-          = image_tag @product.user.avatar.thumb
-
-      .col-md-8.col-xs-6.user_name_college
-        .product_user_name
-          = link_to "投稿者 #{@product.user.name}", user_path(@product.user)
-
-        .college.no-padding.clearfix
-          %h3
-            = @product.college_lecture_name
-
-    %ul.links.clearfix
-      -# %li.link
-      -#   = link_to "#{@product.col_name}ってどんな大学？", new_lecture_path, remote: true
-      - if user_signed_in? && current_user.admin == "true"
-        %li.link
-          = link_to "#{@product.lec_title}ってどんな授業？", edit_lecture_path(@product.lecture), remote: true
-      %li.link
-        = link_to "#{@product.lec_title}のクチコミをみる。", lecture_path(@product.lecture)
-
-    .concept.no-padding
-      %p.concept_label
+      .main_image
+        = image_tag @product.main_image, class: "image"
+      %p.label.no-padding
         コンセプト
-      %P
+      %p.concept.no-padding
         = @product.concept
 
-    -# .tag
-    -#   %ul.clearfix
-    -#     %li
-    -#       %p
-    -#         tagA
-    -#     %li
-    -#       %p
-    -#         tagB
-    -#     %li
-    -#       %p
-    -#         tagC
+      .images_box.clearfix
+        .container
+          %ul.row
+            - @product.image_boies.each_with_index do |image, i|
+              %li.col-md-3.col-xs-8
+                = image_tag image.image.thumb
+                .cover{class:"#{i}"}
+                  %p
+                    click
 
-    .images_box.clearfix
-      .container
-        %ul.row
-          - @product.image_boies.each_with_index do |image, i|
-            %li.col-md-3.col-xs-8
-              = image_tag image.image.thumb
-              .cover{class:"#{i}"}
-                %p
-                  click
-    #js-like
-      = render partial: './likes/like', locals: {product: @product}
+      .label
+        投稿者
+      .user_info.clearfix
+        .col-sm-1.col-xs-3.avatar_box
+          .avatar
+            = image_tag @product.user.avatar.thumb
 
-    %h3.comment_title
-      この作品に対するコメント
+        .col-sm-8.col-xs-12.user_name_college
+          .product_user_name
+            = link_to @product.user.name, user_path(@product.user)
 
-    #js-comments
-      = render partial: 'products/product_comment.html.haml', collection: @product.product_comments
+          .college.no-padding.clearfix
+            %h3
+              = @product.college_lecture_name
 
-    - if user_signed_in?
-      .comment_form.conForm
-        = form_for @product_comment, remote: true do |f|
-          = f.text_area :content, placeholder: "この作品に対する感想を教えてください。", id: "js-comment_field"
-          = f.hidden_field :product_id, value: @product.id
-          = f.submit "投稿する", class: "submitBnt"
-    - else
-      .comment_login_message
-        = link_to "ログインしてこの作品に対するコメントを投稿しよう！", new_user_registration_path
+
+      %ul.links.clearfix
+        - if user_signed_in? && current_user.admin == "true"
+          = link_to edit_lecture_path(@product.lecture), remote: true do
+            %li.link.col-xs-10.col-sm-3
+              #{@product.lec_title} ってどんな授業？
+        = link_to lecture_path(@product.lecture) do
+          %li.link.col-xs-10.col-sm-3
+            #{@product.lec_title}の口コミをみる。
+        %li.col-xs-10.col-sm-2.likes-li
+          #js-like
+            = render partial: './likes/like', locals: {product: @product}
+
+      %h3.comment_title
+        この作品に対するコメント
+
+      #js-comments
+        = render partial: 'products/product_comment.html.haml', collection: @product.product_comments
+
+      - if user_signed_in?
+        .comment_form.conForm
+          = form_for @product_comment, remote: true do |f|
+            = f.text_area :content, placeholder: "この作品に対する感想を教えてください。", id: "js-comment_field"
+            = f.hidden_field :product_id, value: @product.id
+            = f.submit "投稿する", class: "submitBnt"
+      - else
+        = link_to new_user_registration_path, class: "comment_login_message" do
+          ログインしてこの作品に対するコメントを投稿しよう！
+
 .image_panel.clearfix
   .extension_image
     - @product.image_boies.each_with_index do |image, i|

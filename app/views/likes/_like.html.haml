@@ -1,4 +1,4 @@
-.shere.clearfix
+.share.clearfix
   - if user_signed_in?
     - if product.like_user(current_user.id)
       = link_to product_like_path(product_id: product.id, id: product.like_user(current_user)), method: :delete, id: "like-button", remote: true do
