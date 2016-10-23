@@ -1,0 +1,54 @@
+%section.banner.no-padding
+  .background-cover
+  .nav-box
+    .col-sm-10.col-sm-offset-1
+      .navgation.row
+        = link_to lectures_path, class: "col-xs-4 menu" do
+          クラベルとは
+        = link_to lectures_path, class: "col-xs-4 menu" do
+          授業一覧
+        = link_to products_path, class: "col-xs-4 menu" do
+          作品一覧
+
+%section.no-padding.clearfix
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      .frame.mb80
+        %p.expression-title
+          クラベルとは
+        %p.expression-content.mb30
+          みなさんは履修登録で悩んだことはありませんか？
+          %br
+          シラバスの内容と授業がイメージしていたものとあっていなかったり、
+          友達の作品をみて自分も受けてみたかったと後悔したり。
+        %p.point
+          クラベルとは、授業で作成した作品を投稿することによって、
+          授業を作品から選ぶことができるサービスです。
+    .row.expression
+      .frame.mb80
+        %p.expression-title
+          簡単にポートフォリオを作成できる
+        %p.expression-content.mb30
+          また、授業ごとに作品を投稿するだけで簡単に
+          ポートフォリオを作成することができます。
+          %br
+          品にはコメントやイイネをつけることができるので、
+          たくさんの人に自分の作品を評価してもらいましょう。
+
+    .row.expression
+      .center.point.fs-48
+        まずは作品を投稿して
+        %br
+        たくさんの人から評価をもらいましょう！
+      - if user_signed_in?
+        = link_to new_product_path, remote: true, method: :get, class: "btn col-xs-6 col-xs-offset-3" do
+          %p.color-black
+            投稿する
+      - else
+        = link_to new_user_registration_path, method: :get, class: "btn col-xs-6 col-xs-offset-3" do
+          %p.color-black
+            新規登録する
+
+
+.panel.clearfix
+  = render partial: 'products/post'

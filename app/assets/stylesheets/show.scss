@@ -8,12 +8,7 @@
 .product_box{
   margin: 0 auto;
   float: none;
-/*  -webkit-box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);
-          box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);*/
   padding: 20px 20px 0;
-  /*background-color: #fbfaf5;*/
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
 }
 
 .catchcopy {
@@ -26,14 +21,14 @@
 }
 
 .main_image{
-  margin: 0 auto;
-  padding: 0;
   overflow: hidden;
+  text-align: center;
+  background-color: $right_gray;
+  margin-bottom: 30px;
 }
 
 .main_image .image{
-  width: 100%;
-  text-align: center;
+  width: 80%;
 }
 
 .product_title{
@@ -47,13 +42,13 @@
   margin-bottom: 30px;
 }
 
-.product_user_name a{
-  font-size: 16px;
-  margin-bottom: 5px;
+.product_user_name {
+  font-size: 32px;
+  padding-bottom: 15px;
 }
 
 .product_user_name a:hover{
-  color: #c3d845;
+  color: $main_color;
 }
 
 .product_title h3{
@@ -61,8 +56,8 @@
 }
 
 .avatar_box{
+  margin-right: 20px;
   padding: 0;
-  width: 60px;
 }
 
 .avatar{
@@ -70,16 +65,14 @@
 }
 
 .avatar img{
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  /*border: 5px solid #c3d845;*/
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   object-fit: cover;
 }
 
 .user_name_college{
-  padding-left: 15px;
+  padding-left: 10px;
+  border-left: 1px solid $main_color;
 }
 
 .college{
@@ -87,22 +80,41 @@
 }
 
 .college h3{
-  /*margin-bottom: 10px;*/
+ font-size: 24px;
 }
 
 ul.links{
   color: #FFF;
   margin-bottom: 20px;
+  .link:hover{
+    color: $white;
+  }
 }
 
 .links li{
-  margin: 0 10px 0 0;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 10px 0 0;
   padding: 10px 15px;
   float: left;
-  /*border: 2px solid #c3d825;*/
-  background: #c3d825;
-  border-radius: 2.5px;
-  /*box-shadow: 0 1px 0 #69821b;*/
+  background: $main_color;
+  box-shadow: 0 1px 0 $main_color_dark;
+}
+
+#js-like{
+  line-height: 35px;
+  padding: 0;
+}
+
+#js-like li{
+  padding: 0;
+}
+
+
+ul.links li.likes-li{
+  height: 40px;
+  padding: 0;
+  padding: 3px;
 }
 
 .links li a:hover{
@@ -115,11 +127,11 @@ ul.links{
   font-size: 16px;
 }
 
-.concept .concept_label{
+.label{
   font-style: italic;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 5px;
-  /*border-left: 5px solid #c3d845;*/
+  /*border-left: 5px solid $main_color;*/
   /*padding-left: 10px;*/
 }
 
@@ -147,8 +159,9 @@ hr {
   -moz-transform-origin: 50% 50%;
   overflow: scroll;
   margin: 10px 0;
+  margin-bottom: 30px;
   height: 200px;
-  background-color: #FFF;
+  background-color:  $right_gray;
 }
 
 .images_box .container ul li{
@@ -234,30 +247,29 @@ hr {
   border: 1px solid #fff;
   color: #fff;
 }
-.shere{
+
+.share{
   display: inline-block;
-  margin: 20px 10px 10px 0;
-  padding: 10px 10px;
-  background: #c3d825;
-  border-radius: 2.5px;
+  background: $main_color;
   float: none;
 }
 
 .likeBtn li{
   margin-right: 10px;
   float: left;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  line-height: 20px;
 }
 
 
-/*.create_like{
-  background: #d3381c;
-  border-radius: 2.5px;
+.create_like{
+  padding: 0;
 }
 
 .delete_like{
-  background: #c3d825;
-  border-radius: 2.5px;
-}*/
+  padding: 0;
+}
 
 .comment_title{
   margin-top: 30px;
@@ -279,19 +291,17 @@ hr {
   height: 100px;
   width: 100px;
   object-fit: cover;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
 }
 
 .comment_avatar_box .name{
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .comments_box .comment .name{
   margin-top: 20px;
   padding: 10px 0 0;
-  border-top: 1px solid #c3d825;
+  border-top: 1px solid $main_color;
 }
 
 .comments_box .text{
@@ -307,7 +317,8 @@ hr {
 }
 
 .comments_box .comment_message{
-  width: 50%;
+  min-width: 30%;
+  max-width: 50%;
   margin-left: 20px;
   padding-left: 0;
   float: left;
@@ -320,13 +331,11 @@ hr {
 
 .comment_login_message{
   text-align: center;
-  background-color: #c3d845;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  background-color: $main_color;
   padding: 16px;
   font-size: 18px;
 }
 
-.comment_login_message a:hover{
+.comment_login_message:hover{
   color:#fff;
 }

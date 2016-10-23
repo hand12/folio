@@ -65,16 +65,12 @@ ul.college_teacher li{
   height: 100px;
   width: 100px;
   object-fit: cover;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
 }
 
 .lecture_comment_avatar img{
   height: 100px;
   width: 100px;
   object-fit: cover;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
 }
 
 .lecture_comment_name{
@@ -87,7 +83,7 @@ ul.college_teacher li{
   padding: 5px 0 5px 10px;
   font-size: 16px;
   font-style: italic;
-  border-bottom: 1px solid #c3d845;
+  border-bottom: 1px solid $main_color;
 }
 
 .lecture_comment_box{
@@ -96,9 +92,6 @@ ul.college_teacher li{
   margin-left: 20px;
   padding-left: 0;
   float: left;
-  border: 2px solid #c3d845;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
 }
 
 .lecture_comment{
@@ -116,17 +109,16 @@ ul.college_teacher li{
 }
 
 .delete_btn a:hover{
-  color: #c3d845;
+  color: $white;
 }
 
 .lecture_comments {
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  border: 2px solid #c3d825;
   margin-bottom: 20px;
   padding: 10px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  /*background-color: #c3d825;*/
+  background-color: $main_color;
+  -webkit-border-radius: 2.5px;
+          border-radius: 2.5px;
 }
 
 

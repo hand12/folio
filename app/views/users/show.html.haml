@@ -1,13 +1,21 @@
+%section.no-padding.clearfix.pt50.mini-background-cover
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      %p.expression-title
+        #{@user.name}さんの作品一覧
+      %p.expression-content
+        #{@user.name}さんがいままでに投稿した作品を見ることができます。
+
 %section.no-padding.container.clearfix
-  .col-md-10.col-xs-12.col-lg-10.col-md-offset-1.col-lg-offset-1.user_box
-    .col-md-4.col-xs-10.col-lg-4.col-xs-offset-1.col-lg-offset-0.user_avatar_box
+  .user_box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.user_avatar_box.col-xs-10.col-sm-4
       .user_avatar
         = image_tag @user.avatar.thumb
-      - if user_signed_in?
-        - if current_user.id == @user.id
-          .user_edit.user_btn
-            = link_to "編集する", edit_user_path(current_user)
-    .col-md-8.col-xs-10.col-lg-8.user_info_box
+        - if user_signed_in?
+          - if current_user.id == @user.id
+            .user_edit.user_btn
+              = link_to "編集する", edit_user_path(current_user)
+    .col-md-8.col-xs-10.user_info_box.frame
       .user_name
         = @user.name
       .user_college
@@ -18,8 +26,12 @@
       .user_profile
         = @user.profile
 
-%h3.user_product
-  #{@user.name}さんの投稿作品一覧
+%section.no-padding.container.clearfix.pt80
+  .user_box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      %h3.expression-title
+        #{@user.name}さんの投稿作品一覧
+
 %section#works.works.section.no-padding
   .row.no-gutter
     = render @user.products

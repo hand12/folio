@@ -1,36 +1,32 @@
 .user_box{
-  margin-bottom: 50px;
-  padding-top: 120px;
   font-family: genJyuuGothic-Monospace-ExtraLight;
 }
 
 .user_avatar_box{
   padding: 0;
-  text-align: center;
   margin-bottom: 20px;
-  /*margin: 0 auto;*/
 }
-.user_avatar img{
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  /*border: 5px solid #c3d845;*/
-  height: 250px;
-  width: 250px;
-  object-fit: cover;
+
+.user_avatar{
+  text-align: center;
+  img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+  }
 }
 
 .user_edit{
-  box-shadow: 0 2px 0 #69821b;
+  margin: 0 auto;
+  box-shadow: 0 2px 0 $main_color_dark;
   line-height: 40px;
   height: 40px;
   width: 250px;
 }
 
 .user_btn{
-  margin: 0 auto;
-  background: #c3d845;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  text-align: center;
+  background: $main_color;
 }
 
 .user_btn a:hover{
@@ -40,18 +36,11 @@
 .user_info_box {
   font-size: 16px;
   padding: 10px 20px;
-/*  -webkit-box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);
-          box-shadow: 0 0 0.5px 1px rgba(0,0,0,0.1);*/
-  /*border: 2px solid #c3d845;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;*/
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
 }
 
 .user_name{
   padding-left: 15px;
-  border-left: 1px solid #c3d845;
+  border-left: 1px solid $main_color;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -73,8 +62,6 @@
 }
 
 .user_product{
-  font-family: genJyuuGothic-Monospace-ExtraLight;
-  text-align: center;
   padding: 20px;
   font-size: 36px;
 }

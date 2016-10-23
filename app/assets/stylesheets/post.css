@@ -12,7 +12,7 @@
 }*/
 
 label{
-  border: 2px solid #c3d845;
+  border: 2px solid $main_color;
   background-color: #FFF;
   display: block;
   padding: 20px 0;
@@ -21,7 +21,7 @@ label{
 }
 
 label:hover{
-  color: #c3d845;
+  color: $main_color;
   cursor: pointer;
 }
 

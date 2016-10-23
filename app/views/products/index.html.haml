@@ -1,42 +1,10 @@
-%section.banner.no-padding
-  .row.background-image
-    .background-cover
-    %h2
-      作品から授業を選べるシラバス
-    %h1
-      クラベル
-
-%section.no-padding.pt400.clearfix
-  .row.expression.container
-    %p.expression-title.col-xs-8.col-xs-offset-2
-      履修登録で悩んだことはありませんか？
-    .contents.clearfix
-      %ul
-        %li.col-xs-10.col-sm-5.col-sm-offset-1
-          .content
-            %h3
-              シラバスのイメージと授業の内容が違った。
-            %p
-              デザイン系の授業はシラバスの文字を読むだけではわかりづらい部分が多く、その授業の本当の良さを伝えきれていない授業が沢山あった。
-        %li.col-xs-10.col-sm-5
-          .content
-            %h3
-              友達の作品を見て受ければよかったと思った。
-            %p
-              人の作品を見たとき、この授業はこんなに面白そうなことをやるのか、と自分も履修すればよかったと思うことも沢山あった。
-    %p.expression-title.col-xs-8.col-xs-offset-2
-      作品で授業を選択することにより解決
-    %p.sentense.col-xs-8.col-xs-offset-2
-      過去の作品から自分の受けたい授業をみつけよう！
-      %br
-      また、作品を投稿することによってたくさんの人からのコメント付きのポートフォリオを作成しましょう！
-    .btn.col-xs-6.col-xs-offset-3
-      - if user_signed_in?
-        = link_to "投稿する", new_product_path, remote: true, method: :get
-      - else
-        = link_to "新規登録", new_user_registration_path, method: :get
-
-
+%section.no-padding.clearfix.pt50
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      %p.expression-title
+        投稿作品一覧
+      %p.expression-content
+        投稿された作品から自分にあった授業を探しましょう！
 
 %section#works.works.section.no-padding
   .row.no-gutter

@@ -1,9 +1,9 @@
 /* colors */
 
 /* main_colorを一色決めたら、後は勝手に濃いめの色と薄いめの色ができるようにしてます。濃度は適宜変更してください。 */
-$main_color: #00694E;
-$main_color_dark: darken($main_color, 5%);
-$main_color_bright: lighten($main_color, 10%);
+// $main_color: #00694E;
+// $main_color_dark: darken($main_color, 5%);
+// $main_color_bright: lighten($main_color, 10%);
 
 /* bg, border */
 $main_color_bg: #F1F3F3;
@@ -17,3 +17,20 @@ $accent_color_bright: lighten($accent_color, 10%);
 /* text */
 $text_color: #023425;
 $text_color_bright: #CAD5D2;
+
+
+$main_color: #c3d845;
+$main_color_dark: darken($main_color, 20%);
+$main_color_little_bright: lighten($main_color, 30%);
+$main_color_bright: lighten($main_color, 70%);
+$bgc: #F5F5F5;
+
+$red: #FF530D;
+
+$white: #fff;
+$gray: #ddd;
+$right_gray: #f5f5f5;
+$black: #000;
+$green: #ccff66;
+$submit-blue: #38AEF0;
+$account-color: #38aef0;
