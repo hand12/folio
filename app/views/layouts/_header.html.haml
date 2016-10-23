@@ -1,8 +1,14 @@
 %section.banner
   %header#header
     .header-content.clearfix
-      = link_to "トップへ", root_path, class: "title"
-      = link_to "授業一覧", lectures_path, class: "title"
+      .header-top
+        %ul.primary-nav
+          %li
+            = link_to "クラベルとは", root_path, class: "title"
+          %li
+            = link_to "投稿作品一覧", products_path, class: "title"
+          %li
+            = link_to "授業一覧", lectures_path, class: "title"
       %nav.navigation
         %ul.primary-nav
           - if user_signed_in?
@@ -17,7 +23,7 @@
                   = link_to "削除する", product_path(params[:id]), method: :delete
               - elsif controller.controller_name == "users"
                 %li
-                  #{current_user.name}さんのマイページ
+                  = link_to "投稿する", new_product_path, remote: true, method: :get
               - else
                 %li
                   = link_to "投稿する", new_product_path, remote: true, method: :get

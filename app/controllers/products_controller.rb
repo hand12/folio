@@ -52,7 +52,6 @@ class ProductsController < ApplicationController
   def create_params
     params.require(:product).permit(
       :title,
-      :catchcopy,
       :concept,
       :lecture_title,
       product_images_attributes: [:id, :image, :status]
@@ -62,7 +61,6 @@ class ProductsController < ApplicationController
   def update_params
     params.require(:product).permit(
       :title,
-      :catchcopy,
       :concept,
       :lecture_title,
       product_images_attributes: [:id, :image, :status]
