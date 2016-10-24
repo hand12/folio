@@ -11,7 +11,7 @@ html {
 }
 
 @media screen and (min-width : 320px) {
-    html{ font-size : 20%;} 
+    html{ font-size : 50%;} 
 }
 
 @media screen and (min-width : 480px) {
@@ -55,7 +55,7 @@ h5 {
 .btn {
 	background-color: $main_color;
 	color: #fff;
-	font-size: 13px;
+	font-size: 0.8rem;
 	font-weight: 600;
 	letter-spacing: 5px;
 	border: 0;
@@ -128,7 +128,7 @@ ul li {
   top: 0;
 	width: 100%;
   background-color: $white;
-  font-size: 1em;
+  font-size: 1rem;
   z-index: 998;
   -webkit-box-shadow: 0 0 0 2px $right_gray;
           box-shadow: 0 0 0 2px $right_gray;
@@ -146,7 +146,7 @@ ul li {
 
 #header .title {
 	float: left;
-  margin-right: 20px;
+  margin-right: 0.5rem;
 }
 #header.fixed {
 	background-color: rgba(255, 255, 255, 1);
@@ -160,8 +160,7 @@ ul li {
   float: left;
   li {
     display: inline-block;
-    margin-left: 10px;
-    padding: 5px;
+    padding: 0.3rem 0;
   }
 }
 
@@ -169,8 +168,8 @@ ul li {
 	float: right;
   li {
     display: inline-block;
-    margin-left: 10px;
-    padding: 5px;
+    margin-left: 0.5rem;
+    padding: 0.3rem 0;
   }
 }
 
@@ -183,37 +182,6 @@ ul li {
   color: #fff;
 }
 
-
-/* ------------------------------------------------------------------------------
-	 Banner Slider
--------------------------------------------------------------------------------*/
-.banner {
-	background-color: #fff;
-	position: relative;
-	text-align: left;
-}
-.banner blockquote {
-	border: 0;
-	margin: 0;
-	padding: 12% 10% 8% 10%;
-
-}
-.banner h1 {
-
-/*	color: #000;
-	font: 36px "Open Sans";
-	font-weight: 300;*/
-}
-.banner p {
-
-	color: #000;
-	display: block;
-	font-size: 45px;
-	font-style: normal;
-	/*letter-spacing: -3px;*/
-	font-weight: 700;
-
-}
 
 /* ------------------------------------------------------------------------------
 	Works
@@ -250,11 +218,7 @@ ul li {
   background: #FFF;
 }
 .work {
-/*  -moz-box-shadow: 0 0 0 1px #fff;
-  -webkit-box-shadow: 0 0 0 1px #fff;
-  box-shadow: 0 0 0 1px #fff;*/
   overflow: hidden;
-  /*ボックスに入りきらなかったのもをどうするか。*/
   position: relative;
   height: 250px;
   background-color: #FFF;
@@ -263,7 +227,6 @@ ul li {
 .work_box{
   background-color: #FFF;
   width: 100%;
-  /*height: 100%;*/
   height: 250px;
 }
 
@@ -328,14 +291,6 @@ ul li {
     -ms-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-.flex-control-paging li a
-{
-	background: rgba(255, 255, 255, 0) none repeat scroll 0 0;
-}
-
-.flex-control-paging li a.flex-active {
-	background: rgba(255, 255, 255, 0) none repeat scroll 0 0;
-}
 
 /* ------------------------------------------------------------------------------
 	Work animation
@@ -387,27 +342,6 @@ ul li {
 }
 
 
-
-/* ==========================================================================
-	$Bio
-========================================================================== */
-
-  .bio h4 {
-	font-size:30px;
-    font-weight: 700; }
-  .bio h5 {
-    color: #e84545;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px; }
-
-.bio p
-{
-font-size:17px;
-font-weight:400;
-line-height:27px;
-}
-
 /* ------------------------------------------------------------------------------
 	Contact form
 -------------------------------------------------------------------------------*/
@@ -430,7 +364,7 @@ line-height:27px;
 	outline:none;
 	font-style:normal;
 	border:#f4f3f3 1px solid;
-	font-size:15px;
+	font-size: 1rem;
 }
 .conForm input.noMarr {
 	margin-right:0px;
@@ -448,7 +382,7 @@ line-height:27px;
 	height:100px;
 	font-style:normal;
 	resize:none;
-	font-size:15px;
+	font-size: 1rem;
 	border:#f4f3f3 1px solid;
 }
 
@@ -479,7 +413,7 @@ line-height:27px;
 }
 .conForm .submitBnt:hover {
 	/*background:#b8d200;*/
-	color:#fff;
+	color:$white;
 }
 .error_message {
     color: #ff675f;
@@ -488,7 +422,7 @@ line-height:27px;
 }
 #success_page h3 {
     color: #5ed07b;
-    font-size: 17px;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -505,9 +439,7 @@ line-height:27px;
 
 .modal-content {
   overflow: scroll;
-  width: 50%;
   top: 80px;
-  left: 25%;
   max-height: 80vh;
   position: absolute;
   padding: 10px 20px;
@@ -524,8 +456,6 @@ line-height:27px;
 }
 
 .container{
-/*  padding-right:15px;
-  padding-left:15px;*/
   margin-right:auto;
   margin-left:auto
 }
@@ -589,14 +519,13 @@ select {
 }
 
 .background-cover{
-  width: 100%;
   height: 400px;
+  width: 100%;
   background: $right_gray;
 }
 
 .mini-background-cover{
   width: 100%;
-  height: 200px;
   background: $right_gray;
 }
 
@@ -604,24 +533,24 @@ select {
   font-family: genJyuuGothic-Monospace-ExtraLight;
   /*text-align: center;*/
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2rem;
   padding-top: 120px;
   padding-left: 30px;
   color: #fff;
   z-index: 999;
 }
 
-.background-image h1{
-  color: #000;
-  font-family: genJyuuGothic-Monospace-ExtraLight;
-  font-size: 72px;
-  font-weight: bold;
-  padding-left: 30px;
-  letter-spacing: -0.05em;
-}
+// .background-image h1{
+//   color: #000;
+//   font-family: genJyuuGothic-Monospace-ExtraLight;
+//   font-size: 3rem;
+//   font-weight: bold;
+//   padding-left: 30px;
+//   letter-spacing: -0.05em;
+// }
 
 .expression{
-  font-size: 36px;
+  font-size: 2rem;
   font-family: genJyuuGothic-Monospace-ExtraLight;
   width: 100%;
 }
@@ -634,6 +563,7 @@ select {
 }
 
 .frame{
+  padding: 10px;
   border-bottom: 1px solid $gray;
   border-right: 1px solid $gray;
   background-color: $white;
@@ -645,7 +575,7 @@ select {
   font-weight: 100;
   padding: 10px;
   color: #000;
-  font-size: 24px;
+  font-size: 1.5rem;
   background: $main_color;
   margin-bottom: 30px;
   a:hover{
@@ -667,12 +597,12 @@ select {
 }
 
 .expression-content{
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.8em;
 }
 
 .point{
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -681,7 +611,7 @@ select {
 .navgation{
   font-family: genJyuuGothic-Monospace-ExtraLight;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   padding: 10px;
   .menu{
     padding: 10px 0;
@@ -710,5 +640,5 @@ select {
 }
 
 .fs-48{
-  font-size: 48px;
+  font-size: 2.5rem;
 }

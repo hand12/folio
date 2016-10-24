@@ -14,26 +14,25 @@
       %p
         = @lecture.content if @lecture.content
 
-    -# %h3.kuchikomi
-    -#   みんなのクチコミ
     - if @lecture_comments.nil?
       %h3
         まだクチコミはありません。
     - @lecture_comments.each do |comment|
       .lecture_comments_box.clearfix
-        .lecture_comment_avatar_box
+        .lecture_comment_avatar_box.col-sm-1.col-xs-3
           .lecture_comment_avatar
             = image_tag comment.user.avatar.thumb
           .lecture_comment_name
             = comment.user.name
-        .lecture_comment_box
+        .lecture_comment_box.col-sm-8.col-xs-8
           .lecture_comment_difficulty
             評価#{comment.difficulty}
           .lecture_comment
             = comment.comment
-          - if comment.user.id == current_user.id
-            .delete_btn
-              = link_to "このコメントを削除する。", lecture_comment_path(comment.id), method: :delete
+          - if user_signed_in?
+            - if comment.user.id == current_user.id
+              .delete_btn
+                = link_to "このコメントを削除する。", lecture_comment_path(comment.id), method: :delete
 
     - if user_signed_in?
       .post_comment
