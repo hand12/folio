@@ -11,14 +11,13 @@
   padding: 20px 20px 0;
 }
 
-.catchcopy {
+/*.catchcopy {
   padding-left: 10px;
   border-left: solid 1px #C3D825;
   font-family: genJyuuGothic-Monospace-ExtraLight;
   margin: 0 auto 10px;
   font-size: 40px;
-  /*padding: 0;*/
-}
+}*/
 
 .main_image{
   overflow: hidden;
@@ -31,19 +30,19 @@
   width: 80%;
 }
 
-.product_title{
+/*.product_title{
   font-family: genJyuuGothic-Monospace-ExtraLight;
   border-left: solid 1px #C3D825;
   font-size: 30px;
   margin: 20px 0 30px;
-}
+}*/
 
 .user_info{
   margin-bottom: 30px;
 }
 
 .product_user_name {
-  font-size: 32px;
+  font-size: 2rem;
   padding-bottom: 15px;
 }
 
@@ -72,15 +71,13 @@
 
 .user_name_college{
   padding-left: 10px;
+  padding-right: 0;
   border-left: 1px solid $main_color;
-}
-
-.college{
-  font-size: 16px;
+  height: 100px;
 }
 
 .college h3{
- font-size: 24px;
+  font-size: 1.2rem;
 }
 
 ul.links{
@@ -93,7 +90,7 @@ ul.links{
 
 .links li{
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
   margin: 10px 10px 0 0;
   padding: 10px 15px;
   float: left;
@@ -124,15 +121,14 @@ ul.links li.likes-li{
 .concept{
   margin: 10px 0;
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .label{
   font-style: italic;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 1rem;
   margin-bottom: 5px;
-  /*border-left: 5px solid $main_color;*/
-  /*padding-left: 10px;*/
 }
 
 hr {
@@ -199,7 +195,6 @@ hr {
 
 .extension_image{
   list-style: none;
-  /*height: 70vh;*/
   width: 60%;
   overflow: scroll;
   top: 50px;
@@ -208,7 +203,6 @@ hr {
   margin: 0 auto;
   position: absolute;
   padding: 20px;
-  /*border: 2px solid #aaa;*/
   background: #fff;
   z-index: 950;
   display: none;
@@ -272,6 +266,7 @@ hr {
 }
 
 .comment_title{
+  font-size: 1.5rem;
   margin-top: 30px;
   margin-bottom: 5px;
 }
@@ -281,44 +276,44 @@ hr {
 }
 
 .comment_avatar_box{
-  width: 100px;
+  width: 70px;
   float: left;
   padding: 0;
 }
 
+.comment_avatar{
+  height: 70px;
+  padding-bottom: 5px;
+}
 
 .comment_avatar img{
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   object-fit: cover;
 }
 
 .comment_avatar_box .name{
-  text-align: center;
-  font-size: 12px;
+  text-align: left;
+  font-size: 0.5rem;
 }
 
-.comments_box .comment .name{
+/*.comments_box .comment .name{
   margin-top: 20px;
   padding: 10px 0 0;
   border-top: 1px solid $main_color;
-}
+}*/
 
 .comments_box .text{
   padding-bottom: 20px;
 }
 
-.comments_box .comment .name{
-  font-size: 16px;
-}
-
 .comments_box .comment .text{
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .comments_box .comment_message{
   min-width: 30%;
-  max-width: 50%;
+  max-width: 60%;
   margin-left: 20px;
   padding-left: 0;
   float: left;
@@ -333,7 +328,7 @@ hr {
   text-align: center;
   background-color: $main_color;
   padding: 16px;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .comment_login_message:hover{
