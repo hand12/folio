@@ -3,12 +3,12 @@
 #何秒経過すればワーカーを削除するのかを決める
   $timeout = 30
 #自分のアプリケーション名、currentがつくことに注意。
-<<<<<<< HEAD
-  $app_dir = "/home/yusuke/folio/"
-=======
+
+
+
   # $app_dir = "/var/www/folio/current"
   $app_dir = "/home/yusuke/folio"
->>>>>>> 77b6d4ff4f550e72424e088e66581c78de8a10ac
+
 #リクエストを受け取るポート番号を指定。後述
   $listen  = File.expand_path 'tmp/sockets/.unicorn.sock', $app_dir
 #PIDの管理ファイルディレクトリ
