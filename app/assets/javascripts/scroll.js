@@ -1,11 +1,9 @@
 $(document).on('turbolinks:load', function(){
-  var scrollHeight = $(".background-image").height();
-  $(window).scroll(function(){
-    var currentPos = $(this).scrollTop();
-    if (currentPos > 50){
-      $(".background-image").fadeOut();
-    } else {
-      $(".background-image").fadeIn();
-    }
+  $(".scroll").click(function(e){
+    console.log("scroll呼ばれた");
+    console.log($("body").scrollTop());
+    e.preventDefault();
+    // $(window).scrollTop(400);
+    $("body").animate({scrollTop: 420}, 500);
   });
 })

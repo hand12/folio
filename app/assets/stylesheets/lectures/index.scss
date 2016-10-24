@@ -1,9 +1,9 @@
 .lecture_box {
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  padding-top: 120px;
   padding-bottom: 10px;
   float: none;
   margin: 0 auto;
+  margin-bottom: 30px;
   border-bottom: 1px solid #c8c2be;
 }
 
@@ -17,12 +17,12 @@
 /*  margin-top: 150px;*/
   margin-bottom: 20px;
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  border-left: solid 1px #C3D825;
+  border-left: solid 1px $main_color;
 }
 
 .lecture_title h3{
   padding-left: 10px ;
-  font-size: 36px;
+  font-size: 2rem;
 }
 
 ul .college_teacher{
@@ -32,71 +32,64 @@ ul .college_teacher{
 ul.college_teacher li{
   margin-right: 10px;
   float: left;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
 .lecture_content{
   margin-right: 10px;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
-
-.kuchikomi {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
 
 .lecture_comments_box{
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
 
 .lecture_comment_avatar_box{
-  width: 100px;
   float: left;
   padding: 0;
 }
 
 .lecture_comment_avatar{
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   object-fit: cover;
 }
 
 .lecture_comment_avatar img{
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   object-fit: cover;
 }
 
 .lecture_comment_name{
   margin-top: 5px;
-  text-align: center;
-  font-size: 16px;
+  text-align: left;
+  font-size: 0.5rem;
 }
 
 .lecture_comment_difficulty{
-  padding: 5px 0 5px 10px;
-  font-size: 16px;
+  padding-left: 10px;
+  font-size: 1rem;
   font-style: italic;
-  border-bottom: 1px solid $main_color;
 }
 
 .lecture_comment_box{
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  width: 70%;
   margin-left: 20px;
   padding-left: 0;
   float: left;
 }
 
 .lecture_comment{
-  padding: 5px 0 10px 10px;
-  margin-bottom: 20px;
+  padding: 10px 0 10px 10px;
+  margin-bottom: 5px;
+  background-color: $main_color;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .lecture_comments .delete_btn{
@@ -104,8 +97,8 @@ ul.college_teacher li{
 }
 
 .delete_btn{
-  font-size: 12px;
-  padding: 5px 0 5px 10px;
+  font-size: 0.8rem;
+  padding: 0 0 5px 5px;
 }
 
 .delete_btn a:hover{
@@ -126,15 +119,15 @@ ul.college_teacher li{
   margin-top: 20px;
   padding: 15px 0;
   text-align: center;
-  background: #c3d825;
+  background: $main_color;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  box-shadow: 0 2px 0 #69821b;
+  box-shadow: 0 2px 0 $main_color_dark;
 }
 
 .post_comment a{
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  font-size: 24px;
+  font-size: 1rem;
   color: #000;
 }
 
@@ -174,7 +167,7 @@ ul.college_teacher li{
   position: absolute;
   color: #FFF;
   opacity: 0;
-  font-size: 14px;
+  font-size: 1rem;
   top: 45%;
   left: 0;
   right: 0;
@@ -223,13 +216,13 @@ ul.college_teacher li{
 }
 
 .lecture_index .lecture_title h3{
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .lecture_index_title{
   font-family: genJyuuGothic-Monospace-ExtraLight;
   // padding-top: 100px;
   text-align: left;
-  font-size: 36px;
+  font-size: 2rem;
   margin-top: 100px;
   margin-bottom: 30px;
 }
