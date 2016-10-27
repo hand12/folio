@@ -102,12 +102,11 @@ ul.college_teacher li{
 }
 
 .delete_btn a:hover{
-  color: $white;
+  color: $main_color;
 }
 
 .lecture_comments {
   font-family: genJyuuGothic-Monospace-ExtraLight;
-  margin-bottom: 20px;
   padding: 10px;
   background-color: $main_color;
   -webkit-border-radius: 2.5px;
@@ -120,9 +119,8 @@ ul.college_teacher li{
   padding: 15px 0;
   text-align: center;
   background: $main_color;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
   box-shadow: 0 2px 0 $main_color_dark;
+  display: block;
 }
 
 .post_comment a{

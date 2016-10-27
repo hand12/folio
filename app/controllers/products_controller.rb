@@ -54,6 +54,7 @@ class ProductsController < ApplicationController
       :title,
       :concept,
       :lecture_title,
+      :year,
       product_images_attributes: [:id, :image, :status]
       ).merge(user_id: current_user.id)
   end
@@ -63,6 +64,7 @@ class ProductsController < ApplicationController
       :title,
       :concept,
       :lecture_title,
+      :year,
       product_images_attributes: [:id, :image, :status]
       ).merge(user_id: current_user.id)
   end

@@ -33,13 +33,13 @@
             - if comment.user.id == current_user.id
               .delete_btn
                 = link_to "このコメントを削除する。", lecture_comment_path(comment.id), method: :delete
-
-    - if user_signed_in?
-      .post_comment
-        = link_to "#{@lecture.lecture_title}のクチコミを投稿する", new_lecture_comment_path, remote: true
-    - else
-      .comment_login_message
-        = link_to "ログインしてこの授業にに対するクチコミを投稿しよう！", new_user_registration_path
+    .col-xs-12
+      - if user_signed_in?
+        = link_to new_lecture_comment_path, class: "post_comment", remote: true do
+          #{@lecture.lecture_title}のクチコミを投稿する
+      - else
+        = link_to new_user_registration_path, class: "comment_login_message" do
+          ログインしてこの授業にに対するクチコミを投稿しよう！
 
 .panel.clearfix
   = render partial: 'lecture_comments/lecture_comment_post'
