@@ -17,6 +17,11 @@
         コンセプト
       %p.concept.no-padding
         = @product.concept
+      %p.label.no-padding
+        年度
+      %p.concept.no-padding
+        = @product.year if @product.year
+
 
       .images_box.clearfix
         .container
@@ -47,12 +52,12 @@
       %ul.links.clearfix
         - if user_signed_in? && current_user.admin == "true"
           = link_to edit_lecture_path(@product.lecture), remote: true do
-            %li.link.col-xs-10.col-sm-3
+            %li.link.col-xs-12.col-sm-3
               #{@product.lec_title} ってどんな授業？
         = link_to lecture_path(@product.lecture) do
-          %li.link.col-xs-10.col-sm-3
+          %li.link.col-xs-12.col-sm-3
             #{@product.lec_title}の口コミをみる。
-        %li.col-xs-10.col-sm-2.likes-li
+        %li.col-xs-12.col-sm-2.likes-li
           #js-like
             = render partial: './likes/like', locals: {product: @product}
 
@@ -69,7 +74,7 @@
             = f.hidden_field :product_id, value: @product.id
             = f.submit "投稿する", class: "submitBnt"
       - else
-        = link_to new_user_registration_path, class: "comment_login_message" do
+        = link_to new_user_registration_path, class: "comment_login_message col-xs-10 col-xs-offset-1" do
           ログインしてこの作品に対するコメントを投稿しよう！
 
 .image_panel.clearfix
