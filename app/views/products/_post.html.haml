@@ -5,11 +5,13 @@
         .contact
           = form_for @product do |f|
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
-              = f.text_field :title, placeholder: "作品のタイトルを入力して下さい。"
+              = f.text_field :title, placeholder: "作品のタイトルはなんですか？"
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
-              = f.text_area :concept, placeholder: "作品のコンセプトを入力して下さい。"
+              = f.text_area :concept, placeholder: "作品のコンセプトを教えてください。"
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
               = f.text_field :lecture_title, placeholder: "授業名は何ですか？"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              = f.text_field :year, placeholder: "何年度の授業ですか？ ex)2015年度前期"
             = f.fields_for :product_images do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12.img_upload
                 = ff.label :image, "メインの画像を選択してください。"
