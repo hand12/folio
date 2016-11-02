@@ -202,6 +202,10 @@ ul li {
   padding-top: 50px;
 }
 
+.mt30{
+  margin-top: 30px;
+}
+
 .mb30{
   margin-bottom: 30px;
 }
@@ -518,10 +522,29 @@ select {
   background-color: #d3381c;
 }
 
+.top-title{
+  width: 30vw;
+  padding-top: 100px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.top-expression{
+  text-align: center;
+  font-size: 1rem;
+}
+
 .background-cover{
+  font-family: genJyuuGothic-Monospace-ExtraLight;
   height: 400px;
   width: 100%;
   background: $right_gray;
+  background-image: image-url("folio-top.png");
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-position: center;
 }
 
 .mini-background-cover{
@@ -584,6 +607,7 @@ select {
 }
 
 .expression-title{
+  font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -611,10 +635,11 @@ select {
 .navgation{
   font-family: genJyuuGothic-Monospace-ExtraLight;
   text-align: center;
-  font-size: 1.5rem;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 5px;
   .menu{
-    padding: 10px 0;
+    padding: 5px 0;
+    padding-top: 10px;
     border-left: 1px solid $gray;
     border-bottom: 5px solid $white;
     &:last-child{
@@ -629,10 +654,10 @@ select {
 }
 
 .nav-box{
+  height: 48px;
   -webkit-box-shadow: 0 1px 1px -1px #ccc;
           box-shadow: 0 1px 1px -1px #ccc;
-  height: 71px;
-  background-color: $white;
+  // background-color: $white;
 }
 
 .center{
