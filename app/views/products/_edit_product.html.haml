@@ -14,12 +14,12 @@
               = f.text_field :year, value: @product.year
             = f.fields_for :product_images, @product_images.main.first do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12.img_upload
-                = ff.label :image, "メインの画像を選択してください。"
+                = ff.label :image, "メインの画像を選択してください。(jpg/png)"
                 = ff.file_field :image
                 = ff.hidden_field :status, value: "main"
             = f.fields_for :product_images, @product_images.sub do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12.img_upload
-                = ff.label :image, "画像を選択してください。"
+                = ff.label :image, "画像を選択してください。(jpg/png)"
                 = ff.file_field :image
                 = ff.hidden_field :status, value: "sub"
             = f.submit "更新する", class: "submitBnt"

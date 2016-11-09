@@ -10,7 +10,11 @@
           %li
             = link_to "授業一覧", lectures_path, class: "title"
       %nav.navigation
-        %ul.primary-nav
+        #trigger
+          Menu
+        %ul.primary-nav#js-menu
+          #js-close
+            閉じる
           - if user_signed_in?
             %li
               = link_to "ログアウト", destroy_user_session_path, method: :delete
