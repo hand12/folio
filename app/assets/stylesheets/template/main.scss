@@ -128,15 +128,18 @@ ul li {
   top: 0;
 	width: 100%;
   background-color: $white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   z-index: 998;
   -webkit-box-shadow: 0 0 0 2px $right_gray;
           box-shadow: 0 0 0 2px $right_gray;
+  a{
+    border-bottom: 1px solid $white;
+  }
 }
 
 #header a:hover{
   color: $main_color;
-  /*border: 1px solid $main_color;*/
+  border-bottom: 1px solid $main_color;
 }
 
 #header .header-content {
@@ -167,8 +170,8 @@ ul li {
 .navigation {
 	float: right;
   li {
-    display: inline-block;
-    margin-left: 0.5rem;
+    display: block;
+    // margin-left: 0.5rem;
     padding: 0.3rem 0;
   }
 }
@@ -182,6 +185,31 @@ ul li {
   color: #fff;
 }
 
+#js-menu{
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  background-color: #FFF;
+  border: 1px solid #ddd;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+#trigger{
+  padding: 2.5px 5px;
+  &:hover{
+    border-bottom: 1px solid $main_color;
+    cursor: pointer;
+  }
+}
+
+#js-close{
+  text-align: center;
+  &:hover{
+    cursor: pointer;
+    color: $main_color;
+  }
+}
 
 /* ------------------------------------------------------------------------------
 	Works
