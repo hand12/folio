@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :product_comments, only: [:create, :destroy]
   resources :users, only: [:show, :edit, :update]
   get 'products/show' => 'introductions#show'
+  resources :tags
 end

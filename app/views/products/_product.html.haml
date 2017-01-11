@@ -1,6 +1,6 @@
 .col-lg-3.col-md-6.col-sm-6.work
   = link_to product_path(product), class: "work-box" do
-    = image_tag product.main_image, class: "top_image", height: '150'
+    = image_tag product.try(:main_image), class: "top_image", height: '150'
     .overlay
       .overlay-caption
         %h5

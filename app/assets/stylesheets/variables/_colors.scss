@@ -15,7 +15,7 @@ $accent_color_dark: darken($accent_color, 20%);
 $accent_color_bright: lighten($accent_color, 10%);
 
 /* text */
-$text_color: #023425;
+$text_color: #555;
 $text_color_bright: #CAD5D2;
 
 
@@ -29,6 +29,8 @@ $red: #FF530D;
 
 $white: #fff;
 $gray: #ddd;
+$dark_gray: #696969;
+$font-block: #333;
 $right_gray: #f5f5f5;
 $black: #000;
 $green: #ccff66;

@@ -1,0 +1,15 @@
+%section.no-padding.clearfix.pt50.mini-background-cover
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      %p.expression-title
+        タグ一覧
+      %p.expression-content
+        タグから作品を探そう!
+%section.no-padding.clearfix.frame
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      .tag_box
+        %ul
+          - @tags.each do |tag|
+            %li
+              = link_to "#{tag.name}", tag_path(tag.id)
