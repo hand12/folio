@@ -22,3 +22,19 @@ label:hover{
   object-fit: cover;
   margin-bottom: 50px;
 }
+
+.select_tag{
+  .select_label{
+    text-align: left;
+  }
+
+  #product_indivisualOrTeam{
+    margin-left: 0 !important;
+    line-height: 0.75rem;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+    padding: 10px;
+    text-align: left;
+  }
+}
+

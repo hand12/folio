@@ -12,6 +12,12 @@
               = f.text_field :lecture_title, placeholder: "授業名は何ですか？"
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
               = f.text_field :year, placeholder: "何年度の授業ですか？ ex)2015年度前期"
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.select_tag
+              %ul
+                %li.select_label
+                  チームの作品ですか？個人の作品ですか？
+                %li.select_form
+                  = f.select :indivisualOrTeam, ["個人", "チーム開発"]
             = f.fields_for :product_images do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12.img_upload
                 = ff.label :image, "メインの画像を選択してください。(jpg/png)"
