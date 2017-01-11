@@ -13,6 +13,8 @@ class Product < ActiveRecord::Base
   acts_as_taggable_on :labels
   acts_as_taggable
 
+  enum indivisualOrTeam: %i(個人 チーム開発)
+
   def reject_images(attributed)
     attributed['image'].blank?
   end

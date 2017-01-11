@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111170061) do
+ActiveRecord::Schema.define(version: 20170111200749) do
 
   create_table "colleges", force: :cascade do |t|
     t.string   "college_name", limit: 255
@@ -78,15 +78,16 @@ ActiveRecord::Schema.define(version: 20170111170061) do
   add_index "product_images", ["product_id"], name: "index_product_images_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "concept",     limit: 65535
-    t.string   "year",        limit: 255
+    t.string   "title",            limit: 255
+    t.text     "concept",          limit: 65535
+    t.string   "year",             limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "college_id",  limit: 4
-    t.integer  "lecture_id",  limit: 4
-    t.integer  "user_id",     limit: 4
-    t.integer  "likes_count", limit: 4
+    t.integer  "college_id",       limit: 4
+    t.integer  "lecture_id",       limit: 4
+    t.integer  "user_id",          limit: 4
+    t.integer  "likes_count",      limit: 4
+    t.integer  "indivisualOrTeam", limit: 4,     default: 0
   end
 
   add_index "products", ["college_id"], name: "index_products_on_college_id", using: :btree
