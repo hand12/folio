@@ -10,6 +10,9 @@ class Product < ActiveRecord::Base
   attr_accessor :lecture_title
   validates :title, :concept, presence: true
 
+  acts_as_taggable_on :labels
+  acts_as_taggable
+
   def reject_images(attributed)
     attributed['image'].blank?
   end

@@ -1,0 +1,13 @@
+%section.no-padding.clearfix.pt50.mini-background-cover
+  .column-box.col-sm-10.col-sm-offset-1.col-xs-12
+    .row.expression
+      %p.expression-title
+        #{@tag.name}の作品一覧
+      %p.expression-content
+        投稿された作品から自分にあった授業を探しましょう！
+
+%section#works.works.section.no-padding
+  .row.no-gutter
+    = render @products
+.panel.clearfix
+  = render partial: 'products/post'
