@@ -23,5 +23,14 @@
                     = ff.label :image, "画像を選択してください。(jpg/png)"
                     = ff.file_field :image
                     = ff.hidden_field :status, value: "sub"
+              .row.mlr20
+                .col-md-3
+                  = text_field_tag "product[tag][]", "", placeholder: "Web Design"
+                .col-md-3
+                  = text_field_tag "product[tag][]", "", placeholder: "UI"
+                .col-md-3
+                  = text_field_tag "product[tag][]", "", placeholder: "Application"
+                .col-md-3
+                  = text_field_tag "product[tag][]", "", placeholder: "VR"
             = f.submit "投稿する", class: "submitBnt"
             #simple-msg

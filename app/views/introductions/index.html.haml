@@ -10,6 +10,11 @@
         = link_to products_path, class: "col-xs-4 menu" do
           作品一覧
 
+.infobox.clearfix
+  .content.col-sm-10.col-sm-offset-1.col-xs-12
+    = link_to product_path(@newest_product) do
+      #{newest_product_name} さんが作品を投稿しました！チェックしにいきましょう！
+
 %section.no-padding.clearfix
   .column-box.col-sm-10.col-sm-offset-1.col-xs-12
     .row.expression
@@ -41,13 +46,15 @@
         %br
         たくさんの人から評価をもらいましょう！
       - if user_signed_in?
-        = link_to new_product_path, remote: true, method: :get, class: "btn col-xs-6 col-xs-offset-3" do
-          %p.color-black
+        = link_to new_product_path, remote: true, method: :get, class: "col-xs-6 col-xs-offset-3 folio-btn" do
+          %p
             投稿する
+            %i.fa.fa-pencil
       - else
-        = link_to new_user_registration_path, method: :get, class: "btn col-xs-6 col-xs-offset-3" do
-          %p.color-black
+        = link_to new_user_registration_path, method: :get, class: "col-xs-6 col-xs-offset-3 folio-btn" do
+          %p
             新規登録する
+            %i.fa.fa-sign-in
 
 
 .panel.clearfix

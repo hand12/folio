@@ -56,7 +56,7 @@ class ProductsController < ApplicationController
       :lecture_title,
       :year,
       product_images_attributes: [:id, :image, :status]
-      ).merge(user_id: current_user.id)
+      ).merge(user_id: current_user.id, tag_list: params[:product][:tag])
   end
 
   def update_params
@@ -66,7 +66,7 @@ class ProductsController < ApplicationController
       :lecture_title,
       :year,
       product_images_attributes: [:id, :image, :status]
-      ).merge(user_id: current_user.id)
+      ).merge(user_id: current_user.id, tag_list: params[:product][:tag])
   end
 
   def set_new_product
