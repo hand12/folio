@@ -12,6 +12,12 @@
               = f.text_field :lecture_title, value: @product.lec_title
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
               = f.text_field :year, value: @product.year
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12.select_tag
+              %ul
+                %li.select_label
+                  チームの作品ですか？個人の作品ですか？
+                %li.select_form
+                  = f.select :indivisualOrTeam, ["個人", "チーム開発"]
             = f.fields_for :product_images, @product_images.main.first do |ff|
               .col-xs-12.col-sm-12.col-md-12.col-lg-12.img_upload
                 = ff.label :image, "メインの画像を選択してください。(jpg/png)"
@@ -22,5 +28,14 @@
                 = ff.label :image, "画像を選択してください。(jpg/png)"
                 = ff.file_field :image
                 = ff.hidden_field :status, value: "sub"
+            .row.mlr20
+              .col-md-3
+                = text_field_tag "product[tag][]", "", placeholder: "Web Design"
+              .col-md-3
+                = text_field_tag "product[tag][]", "", placeholder: "UI"
+              .col-md-3
+                = text_field_tag "product[tag][]", "", placeholder: "Application"
+              .col-md-3
+                = text_field_tag "product[tag][]", "", placeholder: "VR"
             = f.submit "更新する", class: "submitBnt"
             #simple-msg
