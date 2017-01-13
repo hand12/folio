@@ -18,7 +18,8 @@ module ApplicationHelper
     title = options[:title]
     description = options[:description]
     keywords = options[:keywords]
-    image = options[:image].presence || image_url('folio-top.png')
+    # image = options[:image].presence || image_url('folio-top.png')
+    image = image_url('folio-top.png')
  
     configs = {
       separator: '|',
@@ -35,6 +36,11 @@ module ApplicationHelper
         url: request.original_url,
         image: image,
         site_name: site
+      },
+      twitter:
+      {
+        card: "summary_large_image",
+        creator: "@hand12_k"
       }
     }
  
