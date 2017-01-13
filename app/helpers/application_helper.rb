@@ -40,6 +40,7 @@ module ApplicationHelper
       twitter:
       {
         card: "summary_large_image",
+        image: image,
         creator: "@hand12_k"
       }
     }
