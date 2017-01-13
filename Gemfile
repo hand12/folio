@@ -49,3 +49,4 @@ gem 'rails_12factor'
 gem 'execjs'
 gem "therubyracer"
 gem 'acts-as-taggable-on'
+gem 'meta-tags'
