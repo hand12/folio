@@ -68,10 +68,10 @@
 
       %ul.links.clearfix
         - if user_signed_in? && current_user.admin == "true"
-          = link_to edit_lecture_path(@product.lecture), remote: true do
+          = link_to edit_lecture_path(@lecture), remote: true do
             %li.link.col-xs-12.col-sm-6.col-sm-offset-3
               #{@product.lec_title} ってどんな授業？
-        = link_to lecture_path(@product.lecture) do
+        = link_to lecture_path(@lecture) do
           %li.link.col-xs-12.col-sm-6.col-sm-offset-3
             #{@product.lec_title}の口コミをみる。
 

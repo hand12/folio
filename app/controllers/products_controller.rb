@@ -11,9 +11,8 @@ class ProductsController < ApplicationController
 
   def show
     @lecture_comment = LectureComment.new
-    # @lecture = Lecture.new
-    # @lecture = @product.lecture
-    @lecture = Lecture.find(@product.lecture.id)
+    lecture_id = @product.lecture ? @product.lecture.id : 4
+    @lecture = Lecture.find(lecture_id)
     @product_comment = ProductComment.new
   end
 

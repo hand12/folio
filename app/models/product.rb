@@ -32,11 +32,11 @@ class Product < ActiveRecord::Base
   end
 
   def col_name
-    self.college.college_name if self.college.college_name?
+    self.college ? self.college.college_name : "大学名なし"
   end
 
   def lec_title
-    self.lecture.lecture_title if self.lecture.lecture_title?
+    self.lecture ? self.lecture.lecture_title : "授業なし"
   end
 
   def college_lecture_name
