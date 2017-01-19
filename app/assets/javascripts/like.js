@@ -12,7 +12,6 @@ $(document).on('turbolinks:load', function(){
     function(data){
       console.log("成功");
       buildLike(data.num);
-      $('#js-like').removeClass('animation-target-big');
     }).fail(function(data){
       console.log("失敗");
     });
@@ -26,8 +25,12 @@ $(document).on('turbolinks:load', function(){
 
   $('#js-like').on('click', function(){
     createLike();
-    // $(this).removeClass('animation-target-big');
     $(this).addClass('animation-target-big');
+    var timer = setInterval(function(){
+      $('#js-like').removeClass('animation-target-big');
+      console.log("戻った");
+      clearInterval(timer);
+    }, 1000);
   })
 
 })
