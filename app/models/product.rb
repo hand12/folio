@@ -40,8 +40,8 @@ class Product < ActiveRecord::Base
   end
 
   def college_lecture_name
-    college = self.col_name
-    lecture = self.lec_title
+    college = self.try(:col_name)
+    lecture = self.try(:lec_title)
     return college + "/" + lecture
   end
 

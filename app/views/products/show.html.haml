@@ -20,7 +20,7 @@
       %p.label.no-padding
         年度
       %p.concept.no-padding
-        = @product.year if @product.year
+        = @product.try(:year)
 
 
       .images_box.clearfix
@@ -38,7 +38,7 @@
       .user_info.clearfix.frame
         .col-sm-1.col-xs-3.avatar_box
           .avatar
-            = image_tag @product.user.avatar.thumb
+            = image_tag @product.user.avatar.try(:thumb)
 
         .col-sm-10.col-sm-offset-0.col-xs-6.col-xs-offset-1.user_name_college
           .col-xs-8.p0
@@ -47,7 +47,7 @@
 
             .college.no-padding.clearfix
               %h3
-                = @product.college_lecture_name
+                = @product.try(:college_lecture_name)
       .team_indivisual.clearfix
         = @product.indivisualOrTeam
       .tag_box.col-sm-12.col-sm-offset-0.col-xs-12
