@@ -9,5 +9,6 @@
 %section#works.works.section.no-padding
   .row.no-gutter
     = render @products
+  = paginate @products
 .panel.clearfix
   = render partial: 'products/post'

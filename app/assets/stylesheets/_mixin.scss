@@ -19,3 +19,25 @@
   font-weight: lighter;
   border: 1px solid $color;
 }
+
+@mixin pagination(){
+  font-family: genJyuuGothic-Monospace-ExtraLight;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding-left: 5px;
+  background-color: #f5f5f5;
+  padding: 5px;
+  -webkit-border-radius: 2.5px;
+          border-radius: 2.5px;
+  -webkit-transition: 0.3s;
+     -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+       -o-transition: 0.3s;
+          transition: 0.3s;
+}
+
+@mixin hoverChange(){
+  &:hover{
+    color: $main_color !important;
+  }
+}

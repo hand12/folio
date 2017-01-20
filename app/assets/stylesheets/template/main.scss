@@ -706,3 +706,20 @@ select {
 .mlr20{
   margin: 0 auto;
 }
+
+.pagination{
+  display: block !important;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 50vw;
+  @include pagination();
+  .page{
+    @include hoverChange();
+  }
+  .next{
+    @include hoverChange();
+  }
+  .last{
+    @include hoverChange();
+  }
+}
