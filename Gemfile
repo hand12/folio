@@ -50,3 +50,4 @@ gem 'execjs'
 gem "therubyracer"
 gem 'acts-as-taggable-on'
 gem 'meta-tags'
+gem 'kaminari'

@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @products = Product.order("created_at DESC")
+    @products = Product.order("created_at DESC").page(params[:page]).per(12);
   end
 
   def new
